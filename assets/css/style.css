@@ -1,0 +1,15 @@
+.volimeImage{
+    width:600px;
+    height: 700px;
+}
+.carte{
+    background-image: url("./noir.png");
+    background-size:cover;
+    width: 100px;
+    height: 130px;
+    border: 1px solid red;
+    padding: 0%;
+}
+#tirane{
+    background-image: url("./");
+}
