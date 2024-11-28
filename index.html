@@ -17,42 +17,30 @@
             <article class="w-9/12 mt-[-50px]  ">
                 <div class="absolute border-x-4 px-10 pb-14   ml-0 volimeImage grid grid-rows-7 grid-cols-1 gap-0  justify-center items-center " id="tirane"  >
                     <div class="w-full h-full flex justify-center " >
-                        <div class="carte grid grid-cols-9 grid-rows-9 text-white"> 
-                            </div>
+                        <div class="carte grid grid-cols-9 grid-rows-9 text-white" id="ST"></div>
                     </div>
                     <div class="w-full h-full flex justify-around" >
-                        <div class="carte grid grid-cols-9 grid-rows-9 text-white"> 
-                            </div>
-                        <div class="carte grid grid-cols-9 grid-rows-9 text-white"> 
-                            </div>
+                        <div class="carte grid grid-cols-9 grid-rows-9 text-white" id="CM"></div>
+                        <div class="carte grid grid-cols-9 grid-rows-9 text-white" id="CM" ></div>
                     </div>
                     <div class="w-full h-full flex justify-evenly mt-20">
-                        <div class="carte grid grid-cols-9 grid-rows-9 text-white"> 
-                        </div>
-                        <div class="carte grid grid-cols-9 grid-rows-9 text-white"> 
-                        </div>
+                        <div class="carte grid grid-cols-9 grid-rows-9 text-white"id="RM"></div>
+                        <div class="carte grid grid-cols-9 grid-rows-9 text-white" id="LM"></div>
                     </div>
                     <div class="w-full h-full flex justify-center">
-                        <div class="carte grid grid-cols-9 grid-rows-9 text-white"> 
-                        </div>
+                        <div class="carte grid grid-cols-9 grid-rows-9 text-white" id="CDM"></div>
                     </div>
                     <div class="w-full h-full flex justify-between">
-                        <div class="carte grid grid-cols-9 grid-rows-9 text-white"> 
-                        </div>
-                        <div class="carte grid grid-cols-9 grid-rows-9 text-white"> 
-                        </div>
+                        <div class="carte grid grid-cols-9 grid-rows-9 text-white" id="RB"></div>
+                        <div class="carte grid grid-cols-9 grid-rows-9 text-white"id="LB"></div>
                     </div>
                     <div class="w-full h-full flex justify-evenly">
-                        <div class="carte grid grid-cols-9 grid-rows-9 text-white"> 
-                        </div>
+                        <div class="carte grid grid-cols-9 grid-rows-9 text-white"id="CB"></div>
                         
-                        <div class="carte grid grid-cols-9 grid-rows-9 text-white"> 
-                       </div>
+                        <div class="carte grid grid-cols-9 grid-rows-9 text-white" id="CB"></div>
                     </div> 
                     <div class="w-full h-full flex justify-center ">
-                        <div class="carte grid grid-cols-9 grid-rows-9 text-white"> 
-                           
-                        </div>
+                        <div class="carte grid grid-cols-9 grid-rows-9 text-white" id="GK"></div>
                      </div>
 
                 </div>
@@ -91,8 +79,8 @@
                             
             
                             <select name="position" id="position" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline ">
-                                <option value="position">position</option>
-                                <option value="GK">GK</option> 
+                                <option value="">position</option>
+                                <option value="GK">GK</option>
                                 <option value="CB">CB</option>
                                 <option value="LB">LB</option>
                                 <option value="RB">RB</option>
@@ -120,7 +108,7 @@
                             </label>
                             
                             <select name="nationality" id="nationality" class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700  border border-red-500 rounded shadow appearance-none focus:outline-none focus:shadow-outline">
-                                <option value="nationality" selected="selected">nationality </option>
+                                <option value="" selected="selected">nationality </option>
                                 <option value="Afghanistan">Afghanistan </option>
                                 <option value="Afrique_Centrale">Afrique_Centrale </option>
                                 <option value="Afrique_du_sud">Afrique_du_Sud </option>
@@ -376,12 +364,12 @@
                                 </select>
                         </div>
                         <div class="md:ml-2">
-                            <label class="block mb-2 text-sm font-bold text-gray-700 dark:text-white" for="clup">
-                                clup
+                            <label class="block mb-2 text-sm font-bold text-gray-700 dark:text-white" for="Club">
+                                Club
                             </label>
                             <input
                                 class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700  border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                id="clup"
+                                id="Club"
                                 type="text"
                             />
                         </div>
