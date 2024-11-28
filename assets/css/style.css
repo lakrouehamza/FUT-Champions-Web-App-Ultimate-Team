@@ -1,15 +1,19 @@
 .volimeImage{
-    width:600px;
-    height: 700px;
+    width:680px;
+    height: 850px;
 }
 .carte{
-    background-image: url("./noir.png");
+    background-image: url("./../img/noir.png");
     background-size:cover;
     width: 100px;
-    height: 130px;
-    border: 1px solid red;
-    padding: 0%;
+    height: 160px;
+   
+    /* position: absolute ; */
+    margin-bottom: 230px; 
 }
 #tirane{
-    background-image: url("./");
+    background-image: url("./../img/tirane.png");
+    transform: rotateX(30deg);
+    background-size: 100% 100%;
+
 }
