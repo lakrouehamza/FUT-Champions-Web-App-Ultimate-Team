@@ -3,7 +3,7 @@
     height: 850px;
 }
 .carte{
-    background-image: url("./../img/noir.png");
+    background-image: url("./../../assets/img/noir.png");
     background-size:cover;
     width: 100px;
     height: 160px;
@@ -12,7 +12,7 @@
     margin-bottom: 230px; 
 }
 #tirane{
-    background-image: url("./../img/tirane.png");
+    background-image: url("./../../assets/img/tirane.png");
     transform: rotateX(30deg);
     background-size: 100% 100%;
 
