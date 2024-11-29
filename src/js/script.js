@@ -16,9 +16,18 @@
 // }
 // }//Club , DEF , DRI, PAC, PAS, PHY,SHO, name,nationality,photo,position 
 
+document.getElementById('buttonAdd').addEventListener('click',function(){
+    if(document.getElementById('popup').classList.contains('hidden'))
+        document.getElementById('popup').classList.remove('hidden');
+    else 
+    document.getElementById('popup').classList.add('hidden');
+});
 var equipe =[];
 
-
+function ferme(){
+    
+    document.getElementById('popup').classList.add('hidden');
+}
  
 let position = { position:[], RW : ['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],LW: ['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],ST :['PAC' , 'SHO' , 'PAS' , 'DRI' , 'DEF' , 'PHY'],
                 CDM :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],CM :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],LM :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],RM :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],
@@ -67,75 +76,138 @@ function afichage(){
     const lesCards= document.querySelectorAll('.carte');
     const changement =document.getElementById('changement');
 
+    changement.innerHTML='';
     lesCards.forEach(element =>{
         equipe.forEach(jouer =>{
-            
-            let div1 = document.createElement('div');
-            let div2 = document.createElement('div');
-            let div3 = document.createElement('div');
-            let spanPosition = document.createElement('span');
-            let span1 = document.createElement('span');
-            let span2 = document.createElement('span');
-            let table = document.createElement('table');
-            let trTitle = document.createElement('tr');
-            let trValue= document.createElement('tr');
-            // let imgclup = document.createElement('img');
-            let imgJoure = document.createElement('img');
-            div1.classList.add('carte','grid','grid-cols-9','grid-rows-9','text-white');
-            div2.classList.add('col-start-1','col-end-3','row-start-1','row-end-6','flex','flex-col','justify-between');
-            span1.classList.add('absolute','mt-2');
-            span2.classList.add('absolute','mt-7','text-[10px]'); 
-            div3.classList.add('rounded-xl','col-start-1','col-end-10','row-start-6','row-end-9','text-[6px]','flex','justify-center','items-center','bg-white/30');
-            spanPosition.classList.add('col-start-5','col-end-5','row-start-9','row-end-9','text-[9px]','mt-[-5px]');
-            imgJoure.classList.add('col-start-3','col-end-13','row-start-2','row-end-13');
-            
-            div2.appendChild(span1);
-            div2.appendChild(span2);
-            div3.appendChild(table);
-            table.appendChild(trTitle);
-            table.appendChild(trValue);
-            // span1.textContent=jouer.
-            // span2.textContent=jouer.
-            spanPosition.textContent=jouer.position; 
-            imgJoure.src=jouer.photo;
-            for(let i = 0 ;i<6;i++){
-                let thTitre = document.createElement('th');
-                let thValue = document.createElement('th');
-                trTitle.appendChild(thTitre);
-                trValue.appendChild(thValue);
-                const key = Object.keys(jouer)[i+3];
-                thTitre.innerText=key;
-                thValue.innerText= jouer[key];
-            }        
+            if(element.id == jouer.position){
+                let div1 = document.createElement('div');
+                div1.classList.add('relative', 'w-[100px]', 'h-[180px]', 'bg-cover', 'bg-center', 'transition-all', 'ease-in');
+                div1.style.backgroundImage = "url('https://selimdoyranli.com/cdn/fut-player-card/img/card_bg.png')";
+                
+                let div2 = document.createElement('div');
+                div2.classList.add('relative', 'flex', 'text-[#e9cc74]', 'px-[0.3rem]');
 
-    if(element.hasChildNodes()){
-    console.log("ajoute a changement");
-    changement.appendChild(div1);
-    
-    div1.appendChild(div2);
-    div1.appendChild(imgJoure);
-    div1.appendChild(div3);
-    div1.appendChild(spanPosition);
-   
-    }
-    else
-    if(element.id == jouer.position){
+                let divUpper = document.createElement('div');
+                divUpper.classList.add('absolute', 'py-[0.8rem_0]', 'text-xs', 'uppercase', 'font-light');
 
-        console.log(jouer);
-        console.log("ajoute a tirane ");
-        element.appendChild(div2);
-        element.appendChild(imgJoure);
-        element.appendChild(div3);
-        element.appendChild(spanPosition);
-        
-      
-    }
+                let playerRating = document.createElement('div');
+                playerRating.classList.add('text-[1rem]', 'mt-5');
+                playerRating.textContent = jouer.rating;
+                divUpper.appendChild(playerRating);
+                let playerPosition = document.createElement('div');
+                playerPosition.textContent = jouer.position;
+                divUpper.appendChild(playerPosition);
+                let playerFlag = document.createElement('div');
+                playerFlag.classList.add('block');
+                let flagImg = document.createElement('img');
+                flagImg.src = jouer.flag;
+                flagImg.alt = jouer.nationality;
+                flagImg.classList.add('w-[1rem]', 'h-[14px]', 'object-contain');
+                playerFlag.appendChild(flagImg);
+                divUpper.appendChild(playerFlag);
+                let playerLogo = document.createElement('div');
+                playerLogo.classList.add('block');
+                let logoImg = document.createElement('img');
+                logoImg.src = jouer.logo;
+                logoImg.alt = jouer.club;
+                logoImg.classList.add('w-[1rem]', 'h-[14px]', 'object-contain');
+                playerLogo.appendChild(logoImg);
+                divUpper.appendChild(playerLogo);
+                let playerPhotoDiv = document.createElement('div');
+                playerPhotoDiv.classList.add('w-[70px]', 'h-[80px]', 'mx-auto', 'overflow-hidden');
+                let playerPhoto = document.createElement('img');
+                playerPhoto.src = jouer.photo;
+                playerPhoto.alt = jouer.name;
+                playerPhoto.classList.add('w-full', 'h-full', 'object-contain', 'relative', 'right-[-1rem]', 'bottom-0');
+                playerPhotoDiv.appendChild(playerPhoto);
+                
+                div2.appendChild(divUpper);
+                div2.appendChild(playerPhotoDiv);
+                let divPosition = document.createElement('div');
+                divPosition.classList.add('w-full', 'flex', 'justify-around', 'text-[#88e635]', 'text-[0.7rem]', 'font-bold', 'uppercase');
+                let positionSpan = document.createElement('span');
+                positionSpan.classList.add('ml-[0.4rem]', 'text-shadow-lg');
+                positionSpan.textContent = jouer.position;
+                divPosition.appendChild(positionSpan);
+                let divDetails = document.createElement('div');
+                divDetails.classList.add('relative');
+                
+                let playerNameDiv = document.createElement('div');
+                playerNameDiv.classList.add('text-[#e9cc74]', 'w-[90%]', 'mx-auto');
+                let playerName = document.createElement('div');
+                playerName.classList.add('text-center', 'w-[100%]', 'text-[0.6rem]', 'uppercase', 'border-b-2', 'border-[#e9cc74]/[0.1]');
+                let nameSpan = document.createElement('span');
+                nameSpan.classList.add('block', 'text-shadow-lg');
+                nameSpan.textContent = jouer.name;
+                playerName.appendChild(nameSpan);
+                playerNameDiv.appendChild(playerName);
+                
+                let statsDiv = document.createElement('div');
+                statsDiv.classList.add('flex', 'justify-center');
+                
+                let statsLeft = document.createElement('div');
+                statsLeft.classList.add('pr-[1.5rem]', 'border-r-2', 'border-[#e9cc74]/[0.1]');
+                
+                ['pace', 'shooting', 'passing'].forEach((statKey) => {
+                    let statDiv = document.createElement('div');
+                    statDiv.classList.add('flex', 'items-center', 'text-[0.5rem]', 'uppercase');
+                    let statValue = document.createElement('span');
+                    statValue.classList.add('font-bold', 'mr-[0.3rem]');
+                    statValue.textContent = jouer[statKey];
+                    let statLabel = document.createElement('span');
+                    statLabel.classList.add('font-light');
+                    statLabel.textContent = statKey.toUpperCase().slice(0, 3);
+                    statDiv.appendChild(statValue);
+                    statDiv.appendChild(statLabel);
+                    statsLeft.appendChild(statDiv);
+                });
+                
+                let statsRight = document.createElement('div');
+                ['dribbling', 'defending', 'physical'].forEach((statKey) => {
+                    let statDiv = document.createElement('div');
+                    statDiv.classList.add('flex', 'items-center', 'text-[0.5rem]', 'uppercase');
+                    let statValue = document.createElement('span');
+                    statValue.classList.add('font-bold', 'mr-[0.3rem]');
+                    statValue.textContent = jouer[statKey];
+                    let statLabel = document.createElement('span');
+                    statLabel.classList.add('font-light');
+                    statLabel.textContent = statKey.toUpperCase().slice(0, 3);
+                    statDiv.appendChild(statValue);
+                    statDiv.appendChild(statLabel);
+                    statsRight.appendChild(statDiv);
+                });
+                
+                statsDiv.appendChild(statsLeft);
+                statsDiv.appendChild(statsRight);
+                playerNameDiv.appendChild(statsDiv);
+                
+                divDetails.appendChild(playerNameDiv);
+                
+                div1.appendChild(div2);
+                div1.appendChild(divPosition);
+                div1.appendChild(divDetails);
+                
+                if (element.hasChildNodes()) {
+                    changement.appendChild(div1);
+                } else {
+                    element.appendChild(div1);
+                }
+                
+}
     });
     });
 }
 afichage();
 
+function  testejour( jouer){
+    equipe.forEach(elment => {
+        if(elment.name === jouer.name){
+            return true;
+        }
+    });
+return false;
 
+}
 document.getElementById('formAjouteJour').addEventListener('submit',(e)=>{
     e.preventDefault();
 let valide = true;
@@ -151,7 +223,7 @@ document.querySelectorAll(" form input").forEach(inputs=>{
 );
 
 document.querySelectorAll("form select").forEach(selects =>{
-    if(selects.value == "position" || selects.value=="nationality"){
+    if(selects.value == "position"){
         selects.style.border="solid red 2px";
         valide =false;
     }
@@ -164,8 +236,67 @@ document.querySelectorAll("form input ,form select").forEach(element=>{
     let attribut =element.id;
     objetJoueur[attribut] = element.value;
 });
+
+
+if(!testejour(objetJoueur)){
 equipe.push(objetJoueur);
 console.log(objetJoueur);
 afichage();
 }
+}
+
+
 });
+
+
+document.querySelectorAll('.carte').forEach(card =>{
+    card.addEventListener('click',function(){
+      
+    if(card.hasChildNodes()){
+        if(!card.parentNode.querySelector('#containeEdit')){
+        let supprime = document.createElement('img');
+        let edit = document.createElement('img');
+        edit.id="edit";
+        supprime.id='supprime';
+        let containeEdit = document.createElement('div');
+        containeEdit.id='containeEdit';
+        // containeEdit.classList.add('flex','justify-between','col-start-1','col-end-12','row-start-1','row-end-1');
+        containeEdit.classList.add('flex','justify-between','w-[100px]');
+        containeEdit.appendChild(edit);
+        containeEdit.appendChild(supprime);
+        supprime.classList.add('bg-red-500','hover:bg-black','rounded-[30px]','w-[20px]');
+        edit.classList.add('bg-blue-700','hover:bg-green-500','rounded-[40px]','w-[20px]');
+        supprime.src="./../../assets/img/delete.png";
+        edit.src="./../../assets/img/edit.png";
+        console.log("supprime edete ");
+        card.parentNode.insertBefore(containeEdit,card);
+
+
+// card.addEventListener('click',function(){
+//     if(card.parentNode.querySelector('#containeEdit').classList.contains('hidden')){
+//         card.parentNode.querySelector('#containeEdit').classList.remove('hidden');
+//     }
+//     else 
+//     card.parentNode.querySelector('#containeEdit').classList.add('hidden');
+// }
+// );
+        
+        }
+    }
+    else {
+        document.getElementById('popup').classList.remove('hidden');
+        document.getElementById('position').value=card.id;
+        document.getElementById('position').disabled="false";
+    }
+});
+
+
+
+});
+
+
+// card.getElementById('edit').addEventListener('click',function(){
+//     document.getElementById('popup').classList.remove('hidden');
+//     // let listeInput = document.querySelectorAll('form input','form select');
+//     // let listeFormationCard =document.querySelector()
+// });
