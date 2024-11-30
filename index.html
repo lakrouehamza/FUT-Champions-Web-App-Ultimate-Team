@@ -3,141 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="./src/output.css">
+    <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
-    <header></header>
-    <main>
-        <section class="  flex ">
-            <!-- style="perspective: 1000px; -->
-            <article class="w-9/12 mt-[-50px]  ">
-                
-                <div class="absolute border-x-4 px-10 pb-14   ml-0 volimeImage grid grid-rows-7 grid-cols-1 gap-0  justify-center items-center " id="tirane"  >
-                    <div class="w-full h-full flex justify-center " >
-                        <div id="containerCard_">
-                            <div class="carte grid grid-cols-9 grid-rows-9 text-white" id="ST"></div>
-                        </div>
+    <section class="  mx-auto w-full border-2 flex justify-center border-blue-500"style="perspective: 1000px;">
+        <div class="bg-[url(./assets/img/tirane.png)] bg-cover w-[80%] h-[53vw] absolute mt-[1%] " style="transform: rotateX(40deg); z-index: -1;" >
+        </div>
+        <article class="flex border-2 w-[70%] mt-[1%] absolute  h-[120vh]  border-red-500 justify-between ">
+            <div class="flex flex-col h-full justify-center  border-2 border-green-500">
+                <img src="./assets/img/noir.png" alt="" srcset="" style="width: 100px;">
+                            </div>
+                <div class="flex flex-col h-full justify-center ">
+                    <img src="./assets/img/noir.png" alt="" srcset="" style="width: 100px;"> 
+                    <img src="./assets/img/noir.png" alt="" srcset="" style="width: 100px;"></div>
+                    <div class="flex flex-col h-full justify-center">
+                    <img src="./assets/img/noir.png" alt="" srcset="" style="width: 100px;">
+                        <img src="./assets/img/noir.png" alt="" srcset="" style="width: 100px;">
                     </div>
-                    <div class="w-full h-full flex justify-around" >
-                        <div id="containerCard_">
-                            <div class="carte grid grid-cols-9 grid-rows-9 text-white" id="CM"></div>
-                        </div>
-                        <div id="containerCard_">
-                            <div class="carte grid grid-cols-9 grid-rows-9 text-white" id="CM" ></div>
-                        </div>
-                    </div>
-                    <div class="w-full h-full flex justify-evenly mt-20">
-                        <div id="containerCard_">
-                            <div class="carte grid grid-cols-9 grid-rows-9 text-white"id="RM"></div>
-                        </div>
-                        <div id="containerCard_">
-                            <div class="carte grid grid-cols-9 grid-rows-9 text-white" id="LM"></div>
-                        </div>
-                    </div>
-                    <div class="w-full h-full flex justify-center">
-                        <div id="containerCard_">
-                            <div class="carte grid grid-cols-9 grid-rows-9 text-white" id="CDM"></div>
-                        </div>
-                    </div>
-                    <div class="w-full h-full flex justify-between">
-                        <div id="containerCard_">
-                            <div class="carte grid grid-cols-9 grid-rows-9 text-white" id="RB"></div>
-                        </div>
-                        <div id="containerCard_">
-                            <div class="carte grid grid-cols-9 grid-rows-9 text-white"id="LB"></div>
-                        </div>
-                    </div>
-                    <div class="w-full h-full flex justify-evenly">
-                        <div id="containerCard_">
-                            <div class="carte grid grid-cols-9 grid-rows-9 text-white"id="CB"></div>
-                        </div>
-                        <div id="containerCard_">
-                            <div class="carte grid grid-cols-9 grid-rows-9 text-white" id="CB"></div>
-                        </div>
-                    </div> 
-                    <div class="w-full h-full flex justify-center ">
-                        <div id="containerCard_">
-                            <div class="carte grid grid-cols-9 grid-rows-9 text-white" id="GK"></div>
-                        </div>
-                     </div>
-
-                </div>
-                <div class=" bg-slate-700 w-full flex flex-row flex-wrap gap-4 mt-[800px]" style="z-index: 100;" id="changement"> 
-                    <h1>d,d </h1>
-                </div>
-            </article>
+                        <div class="flex flex-col h-full justify-center"> 
+                                        <img src="./assets/img/noir.png" alt="" srcset="" style="width: 100px;">
+                                        <img src="./assets/img/noir.png" alt="" srcset="" style="width: 100px;">
+                                    </div>
+                            <div class="flex  flex-col h-full justify-center">
+                                             <img src="./assets/img/noir.png" alt="" srcset="" style="width: 100px;">
+                                             <img src="./assets/img/noir.png" alt="" srcset="" style="width: 100px;">
+                                            </div>
+                                <div class="flex flex-col h-full  justify-center">             <img src="./assets/img/noir.png" alt="" srcset="" style="width: 100px;"></div>
             
-            <article class=" absolute bg-green-600 right-0 w-[40%]  ">
-            <!-- <button type="submit" id="formation"> 4-3-3</button> -->
-            <button  class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border  border-blue-500 hover:border-transparent rounded" id="buttonAdd">
-                Add Player
-            </button>
-
-            <div class="container mx-auto px-4 py-8  hidden bg-gray-800 bg-opacity-50 absolute top-0 left-0 w-full z-10" id="popup">
-                <h1 class="text-3xl font-bold text-center mb-8 text-white">FUT-Champions-Web-App-Ultimate-Team</h1>
-                <div class="bg-gray-800 p-4 rounded bg-opacity-50">
-                  <h2 class="text-xl font-bold mb-4 text-white">Add Player</h2>
-                  <form id="formAjouteJour" class="space-y-4">
-                    <div>
-                      <label class="block mb-2 text-white">Name</label>
-                      <input type="text" id="name"  class="w-full p-2  rounded"> 
-                    </div>
-                    <div>
-                      <label class="block mb-2 text-white">Position</label> 
-                      <select id="position"  class="w-full p-2  rounded">
-                        <option value="position" >position</option>
-                        <option value="GK">GK</option>
-                        <option value="CB">CB</option>
-                        <option value="LB">LB</option>
-                        <option value="RB">RB</option>
-                        <option value="CDM">CDM</option>
-                        <option value="LM">LM</option>
-                        <option value="RM">RM</option>
-                        <option value="CM">CM</option>
-                        <option value="ST">ST</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label class="block mb-2 text-white ">Rating</label>  
-                      <input type="number" id="rating"  class="w-full p-2  rounded">
-                    </div>
-                    <div>
-                      <label class="block mb-2 text-white">Club</label>
-                      <input type="file" name="image" id="club" accept=".png" class="w-full  rounded-md text-white outline-none focus:ring-2 focus:ring-blue-100">
-                    </div>
-                    <div>
-                      <label class="block mb-2 text-white">Image-rec</label>
-                      <input type="file" name="image" id="image-src" accept=".png" class="w-full  rounded-md text-white outline-none focus:ring-2 focus:ring-blue-100">
-                    </div>
-                    <div>
-                      <label class="block mb-2 text-white">Nationality</label>
-                      <input type="file" name="image" id="nationality" accept=".png" class="w-full   rounded-md text-white outline-none focus:ring-2 focus:ring-blue-100">
-                    </div>
-                    <div class="mb-4" id="containerCompetence">
-                        <label class="block mb-2 text-sm font-bold text-gray-700 dark:text-white" for="competence">
-                            competence
-                        </label>
-                    
-                        <table class=" w-full  h-24 px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline   flex-wrap" id="competence">
-                            
-                        </table>
-                    </div>
-
-                    <div class="flex justify-between">
-                    <button type="submit" class="w-5/12 bg-blue-600 hover:bg-blue-700 p-2 rounded">Add Player</button>
-                    <button type="button" class="w-5/12 bg-blue-600 hover:bg-blue-700 p-2 rounded" onclick="ferme()">Anule</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </article>
-        </section>
-    </main>
-    <footer></footer>
-    <script src="./src/js/script.js"></script>
+        </article>
+    </section>
 </body>
 </html>
