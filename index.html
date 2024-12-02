@@ -6,32 +6,602 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+        .cardAjout{
+            /* background: conic-gradient(from 0deg, #f000ff, #f0000f, #323258, #a76d7a, #aff524, #33ff00); */
+            
+        animation: cardAjout 2.5s linear ;
+        }
+       
+            @keyframes cardAjout {
+        0% {
+            transform:  rotateY(0deg);
+            transform:  rotateX(10deg);
+        }
+        10% { 
+            transform:  rotateY(10deg);
+            transform:  rotateX(10deg);
+        }
+        20% {
+            transform:  rotateY(40deg);
+        }
+        30% {
+            transform:  rotateY(90deg);
+            transform:  rotateX(50deg);
+        
+        }
+        40% {
+            background: conic-gradient(from 0deg, #1e0ab4, #ffffff, #11d6d6, #7d011c, #aff524, #383c2d); 
+            transform:  rotateY(120deg);
+        }
+        43%{
+            
+            background: conic-gradient(from 0deg, #1e0ab4, #bccb18, #72041e, #37023a, #4c05a3, #68831d); 
+        }
+        45%{
+            
+            background: conic-gradient(from 0deg, #ea1f1f, #115275, #370110, #dba70b, #911057, #520404); 
+        }
+        46%{
+            
+            background: conic-gradient(from 0deg, #1e0ab4, #ffffff, #11d6d6, #7d011c, #aff524, #383c2d); 
+        }
+        50% {
+            background: conic-gradient(from 0deg, #7d011c, #aff524, #383c2d, #1e0ab4, #ffffff, #11d6d6); 
+            transform:  rotateY(50deg);
+        }
+        60% {  
+            transform:  rotateY(190deg);
+        }
+        70% {  
+            transform:  rotateY(210deg);
+        }
+        80% { 
+            transform:  rotateY(250deg);
+        }
+        90% {  
+            transform:  rotateY(300deg);
+        }
+        100% {  
+            transform:  rotateY(360deg);
+        }
+    }
+    
+    </style>
 </head>
 <body>
-    <section class="  mx-auto w-full border-2 flex justify-center border-blue-500"style="perspective: 1000px;">
-        <div class="bg-[url(./assets/img/tirane.png)] bg-cover w-[80%] h-[53vw] absolute mt-[1%] " style="transform: rotateX(40deg); z-index: -1;" >
+    <section class="  mx-auto my-auto h-vh w-full border-2 flex mt-auto justify-center  border-blue-500 justify-center aling-items  "style="perspective: 1000px;">
+        <div class="bg-black/60 w-full h-[40px] absolute flex justify-around">
+            <button type="button" class="bg-blue-700 w-[100px] rounded-[5px]">Add Player</button>
+            <select name="" id="" class="w-[100px] rounded-[5px] text-center">
+                <option value="">4-3-3</option>
+                <option value="">4-4-2</option>
+            </select>
         </div>
-        <article class="flex border-2 w-[70%] mt-[1%] absolute  h-[120vh]  border-red-500 justify-between ">
-            <div class="flex flex-col h-full justify-center  border-2 border-green-500">
-                <img src="./assets/img/noir.png" alt="" srcset="" style="width: 100px;">
-                            </div>
-                <div class="flex flex-col h-full justify-center ">
-                    <img src="./assets/img/noir.png" alt="" srcset="" style="width: 100px;"> 
-                    <img src="./assets/img/noir.png" alt="" srcset="" style="width: 100px;"></div>
-                    <div class="flex flex-col h-full justify-center">
-                    <img src="./assets/img/noir.png" alt="" srcset="" style="width: 100px;">
-                        <img src="./assets/img/noir.png" alt="" srcset="" style="width: 100px;">
-                    </div>
-                        <div class="flex flex-col h-full justify-center"> 
-                                        <img src="./assets/img/noir.png" alt="" srcset="" style="width: 100px;">
-                                        <img src="./assets/img/noir.png" alt="" srcset="" style="width: 100px;">
-                                    </div>
-                            <div class="flex  flex-col h-full justify-center">
-                                             <img src="./assets/img/noir.png" alt="" srcset="" style="width: 100px;">
-                                             <img src="./assets/img/noir.png" alt="" srcset="" style="width: 100px;">
-                                            </div>
-                                <div class="flex flex-col h-full  justify-center">             <img src="./assets/img/noir.png" alt="" srcset="" style="width: 100px;"></div>
+        <div class="xl:bg-[url(./assets/img/tirane.png)]  bg-[url(./assets/img/tiraneMopile.jpg)] bg-cover  w-[100vw] h-[100vh]   tirane" ></div>
+        <article class="flex md:flex-row flex-col border-2 w-[70%] mt-[1%] absolute  border-green-500 h-[60vw]  justify-center  grid grid-rows-7 grid-cols-1   w-[83vw] h-[94vh]">
             
+        <div class="flex flex-row justify-center">
+            <div class="border-2 border-blue-500 flex scale-[0.75] " style=" perspective: 500px;">
+                <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout ">
+                    <div class=" col-start-2  col-span-2 row-start-2 row-span-5 bg-white/15  rounded-t-[4px] r flex flex-col items-center">
+                        <span>90</span>
+                        <span class="mt-[-8px] text-[10px]">cmp</span>
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] mb-[2px] w-9/12" src="./ar.webp" alt="">
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] w-9/12" src="./ar.webp" alt="">
+                    </div>
+                    <img src="./assets/img/jeun.png" alt="" srcset="" class="w-[10px] col-start-5 row-start-1 mt-1">
+                    <img  src="./assets/img/amine-removebg-preview.png" class=" w-full bg-white/70 col-span-5 col-start-4 row-start-2  row-span-5   rounded-tl-[30px] rounded-br-[30px]  h-[79px] mt-[2px]    ">
+                    <span class="col-span-5 col-start-4 row-start-6 row-span-1 text-[10px]  text-center text-black  bg-white/30 rounded-[5px] z-10" style="font-family: Roboto;">C.Ronaldo</span>
+                    <hr class=" z-10 border-red-500 row-start-7  col-span-7 col-start-2">
+                    <table class="bg-white/20 row-start-7 row-span-2 col-start-2 col-span-7 text-[6px]  rounded-tr-[10px] rounded-bl-[10px] font-[Latin]">
+                        <tr>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th class="border-l-[0.5px]  border-red-500 rounded-tl-[10px] ">pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                        </tr>
+                        <tr >
+                            <th>90</th>
+                            <th>90</th>
+                            <th>90</th>
+                            <th class="border-l-[1px] border-red-500">90</th>
+                            <th>90</th>
+                            <th>90</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center "> 
+                    <img src="./assets/img/edit.png" class="" alt="">
+                    <img src="./assets/img/change.png" class="" alt="">
+                    <img src="./assets/img/de.webp" class=" w-[16px]" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-row justify-around">
+            <div class="border-2 border-blue-500 flex scale-[0.75] " style=" perspective: 500px;">
+                <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout ">
+                    <div class=" col-start-2  col-span-2 row-start-2 row-span-5 bg-white/15  rounded-t-[4px] r flex flex-col items-center">
+                        <span>90</span>
+                        <span class="mt-[-8px] text-[10px]">cmp</span>
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] mb-[2px] w-9/12" src="./ar.webp" alt="">
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] w-9/12" src="./ar.webp" alt="">
+                    </div>
+                    <img src="./assets/img/jeun.png" alt="" srcset="" class="w-[10px] col-start-5 row-start-1 mt-1">
+                    <img  src="./assets/img/amine-removebg-preview.png" class=" w-full bg-white/70 col-span-5 col-start-4 row-start-2  row-span-5   rounded-tl-[30px] rounded-br-[30px]  h-[79px] mt-[2px]    ">
+                    <span class="col-span-5 col-start-4 row-start-6 row-span-1 text-[10px]  text-center text-black  bg-white/30 rounded-[5px] z-10" style="font-family: Roboto;">C.Ronaldo</span>
+                    <hr class=" z-10 border-red-500 row-start-7  col-span-7 col-start-2">
+                    <table class="bg-white/20 row-start-7 row-span-2 col-start-2 col-span-7 text-[6px]  rounded-tr-[10px] rounded-bl-[10px] font-[Latin]">
+                        <tr>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th class="border-l-[0.5px]  border-red-500 rounded-tl-[10px] ">pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                        </tr>
+                        <tr >
+                            <th>90</th>
+                            <th>90</th>
+                            <th>90</th>
+                            <th class="border-l-[1px] border-red-500">90</th>
+                            <th>90</th>
+                            <th>90</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center "> 
+                    <img src="./assets/img/edit.png" class="" alt="">
+                    <img src="./assets/img/change.png" class="" alt="">
+                    <img src="./assets/img/de.webp" class=" w-[16px]" alt="">
+                </div>
+            </div>
+            <div class="border-2 border-blue-500 flex scale-[0.75] " style=" perspective: 500px;">
+                <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout ">
+                    <div class=" col-start-2  col-span-2 row-start-2 row-span-5 bg-white/15  rounded-t-[4px] r flex flex-col items-center">
+                        <span>90</span>
+                        <span class="mt-[-8px] text-[10px]">cmp</span>
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] mb-[2px] w-9/12" src="./ar.webp" alt="">
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] w-9/12" src="./ar.webp" alt="">
+                    </div>
+                    <img src="./assets/img/jeun.png" alt="" srcset="" class="w-[10px] col-start-5 row-start-1 mt-1">
+                    <img  src="./assets/img/amine-removebg-preview.png" class=" w-full bg-white/70 col-span-5 col-start-4 row-start-2  row-span-5   rounded-tl-[30px] rounded-br-[30px]  h-[79px] mt-[2px]    ">
+                    <span class="col-span-5 col-start-4 row-start-6 row-span-1 text-[10px]  text-center text-black  bg-white/30 rounded-[5px] z-10" style="font-family: Roboto;">C.Ronaldo</span>
+                    <hr class=" z-10 border-red-500 row-start-7  col-span-7 col-start-2">
+                    <table class="bg-white/20 row-start-7 row-span-2 col-start-2 col-span-7 text-[6px]  rounded-tr-[10px] rounded-bl-[10px] font-[Latin]">
+                        <tr>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th class="border-l-[0.5px]  border-red-500 rounded-tl-[10px] ">pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                        </tr>
+                        <tr >
+                            <th>90</th>
+                            <th>90</th>
+                            <th>90</th>
+                            <th class="border-l-[1px] border-red-500">90</th>
+                            <th>90</th>
+                            <th>90</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center "> 
+                    <img src="./assets/img/edit.png" class="" alt="">
+                    <img src="./assets/img/change.png" class="" alt="">
+                    <img src="./assets/img/de.webp" class=" w-[16px]" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-row justify-around"> 
+            <div class="border-2 border-blue-500 flex  scale-[0.75] " style=" perspective: 500px;">
+                <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout ">
+                    <div class=" col-start-2  col-span-2 row-start-2 row-span-5 bg-white/15  rounded-t-[4px] r flex flex-col items-center">
+                        <span>90</span>
+                        <span class="mt-[-8px] text-[10px]">cmp</span>
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] mb-[2px] w-9/12" src="./ar.webp" alt="">
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] w-9/12" src="./ar.webp" alt="">
+                    </div>
+                    <img src="./assets/img/jeun.png" alt="" srcset="" class="w-[10px] col-start-5 row-start-1 mt-1">
+                    <img  src="./assets/img/amine-removebg-preview.png" class=" w-full bg-white/70 col-span-5 col-start-4 row-start-2  row-span-5   rounded-tl-[30px] rounded-br-[30px]  h-[79px] mt-[2px]    ">
+                    <span class="col-span-5 col-start-4 row-start-6 row-span-1 text-[10px]  text-center text-black  bg-white/30 rounded-[5px] z-10" style="font-family: Roboto;">C.Ronaldo</span>
+                    <hr class=" z-10 border-red-500 row-start-7  col-span-7 col-start-2">
+                    <table class="bg-white/20 row-start-7 row-span-2 col-start-2 col-span-7 text-[6px]  rounded-tr-[10px] rounded-bl-[10px] font-[Latin]">
+                        <tr>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th class="border-l-[0.5px]  border-red-500 rounded-tl-[10px] ">pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                        </tr>
+                        <tr >
+                            <th>90</th>
+                            <th>90</th>
+                            <th>90</th>
+                            <th class="border-l-[1px] border-red-500">90</th>
+                            <th>90</th>
+                            <th>90</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center "> 
+                    <img src="./assets/img/edit.png" class="" alt="">
+                    <img src="./assets/img/change.png" class="" alt="">
+                    <img src="./assets/img/de.webp" class=" w-[16px]" alt="">
+                </div>
+            </div>
+            <div class="border-2 border-blue-500 flex  scale-[0.75] " style=" perspective: 500px;">
+                <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout ">
+                    <div class=" col-start-2  col-span-2 row-start-2 row-span-5 bg-white/15  rounded-t-[4px] r flex flex-col items-center">
+                        <span>90</span>
+                        <span class="mt-[-8px] text-[10px]">cmp</span>
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] mb-[2px] w-9/12" src="./ar.webp" alt="">
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] w-9/12" src="./ar.webp" alt="">
+                    </div>
+                    <img src="./assets/img/jeun.png" alt="" srcset="" class="w-[10px] col-start-5 row-start-1 mt-1">
+                    <img  src="./assets/img/amine-removebg-preview.png" class=" w-full bg-white/70 col-span-5 col-start-4 row-start-2  row-span-5   rounded-tl-[30px] rounded-br-[30px]  h-[79px] mt-[2px]    ">
+                    <span class="col-span-5 col-start-4 row-start-6 row-span-1 text-[10px]  text-center text-black  bg-white/30 rounded-[5px] z-10" style="font-family: Roboto;">C.Ronaldo</span>
+                    <hr class=" z-10 border-red-500 row-start-7  col-span-7 col-start-2">
+                    <table class="bg-white/20 row-start-7 row-span-2 col-start-2 col-span-7 text-[6px]  rounded-tr-[10px] rounded-bl-[10px] font-[Latin]">
+                        <tr>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th class="border-l-[0.5px]  border-red-500 rounded-tl-[10px] ">pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                        </tr>
+                        <tr >
+                            <th>90</th>
+                            <th>90</th>
+                            <th>90</th>
+                            <th class="border-l-[1px] border-red-500">90</th>
+                            <th>90</th>
+                            <th>90</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center "> 
+                    <img src="./assets/img/edit.png" class="" alt="">
+                    <img src="./assets/img/change.png" class="" alt="">
+                    <img src="./assets/img/de.webp" class=" w-[16px]" alt="">
+                </div>
+            </div>
+            <div class="border-2 border-blue-500 flex  scale-[0.75]" style=" perspective: 500px;">
+                <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout ">
+                    <div class=" col-start-2  col-span-2 row-start-2 row-span-5 bg-white/15  rounded-t-[4px] r flex flex-col items-center">
+                        <span>90</span>
+                        <span class="mt-[-8px] text-[10px]">cmp</span>
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] mb-[2px] w-9/12" src="./ar.webp" alt="">
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] w-9/12" src="./ar.webp" alt="">
+                    </div>
+                    <img src="./assets/img/jeun.png" alt="" srcset="" class="w-[10px] col-start-5 row-start-1 mt-1">
+                    <img  src="./assets/img/amine-removebg-preview.png" class=" w-full bg-white/70 col-span-5 col-start-4 row-start-2  row-span-5   rounded-tl-[30px] rounded-br-[30px]  h-[79px] mt-[2px]    ">
+                    <span class="col-span-5 col-start-4 row-start-6 row-span-1 text-[10px]  text-center text-black  bg-white/30 rounded-[5px] z-10" style="font-family: Roboto;">C.Ronaldo</span>
+                    <hr class=" z-10 border-red-500 row-start-7  col-span-7 col-start-2">
+                    <table class="bg-white/20 row-start-7 row-span-2 col-start-2 col-span-7 text-[6px]  rounded-tr-[10px] rounded-bl-[10px] font-[Latin]">
+                        <tr>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th class="border-l-[0.5px]  border-red-500 rounded-tl-[10px] ">pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                        </tr>
+                        <tr >
+                            <th>90</th>
+                            <th>90</th>
+                            <th>90</th>
+                            <th class="border-l-[1px] border-red-500">90</th>
+                            <th>90</th>
+                            <th>90</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center "> 
+                    <img src="./assets/img/edit.png" class="" alt="">
+                    <img src="./assets/img/change.png" class="" alt="">
+                    <img src="./assets/img/de.webp" class=" w-[16px]" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-row justify-evenly">
+            <div class="border-2 border-blue-500 flex  scale-[0.75]" style=" perspective: 500px;">
+                <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout ">
+                    <div class=" col-start-2  col-span-2 row-start-2 row-span-5 bg-white/15  rounded-t-[4px] r flex flex-col items-center">
+                        <span>90</span>
+                        <span class="mt-[-8px] text-[10px]">cmp</span>
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] mb-[2px] w-9/12" src="./ar.webp" alt="">
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] w-9/12" src="./ar.webp" alt="">
+                    </div>
+                    <img src="./assets/img/jeun.png" alt="" srcset="" class="w-[10px] col-start-5 row-start-1 mt-1">
+                    <img  src="./assets/img/amine-removebg-preview.png" class=" w-full bg-white/70 col-span-5 col-start-4 row-start-2  row-span-5   rounded-tl-[30px] rounded-br-[30px]  h-[79px] mt-[2px]    ">
+                    <span class="col-span-5 col-start-4 row-start-6 row-span-1 text-[10px]  text-center text-black  bg-white/30 rounded-[5px] z-10" style="font-family: Roboto;">C.Ronaldo</span>
+                    <hr class=" z-10 border-red-500 row-start-7  col-span-7 col-start-2">
+                    <table class="bg-white/20 row-start-7 row-span-2 col-start-2 col-span-7 text-[6px]  rounded-tr-[10px] rounded-bl-[10px] font-[Latin]">
+                        <tr>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th class="border-l-[0.5px]  border-red-500 rounded-tl-[10px] ">pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                        </tr>
+                        <tr >
+                            <th>90</th>
+                            <th>90</th>
+                            <th>90</th>
+                            <th class="border-l-[1px] border-red-500">90</th>
+                            <th>90</th>
+                            <th>90</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center "> 
+                    <img src="./assets/img/edit.png" class="" alt="">
+                    <img src="./assets/img/change.png" class="" alt="">
+                    <img src="./assets/img/de.webp" class=" w-[16px]" alt="">
+                </div>
+            </div>
+            <div class="border-2 border-blue-500 flex scale-[0.75] " style=" perspective: 500px;">
+                <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout ">
+                    <div class=" col-start-2  col-span-2 row-start-2 row-span-5 bg-white/15  rounded-t-[4px] r flex flex-col items-center">
+                        <span>90</span>
+                        <span class="mt-[-8px] text-[10px]">cmp</span>
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] mb-[2px] w-9/12" src="./ar.webp" alt="">
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] w-9/12" src="./ar.webp" alt="">
+                    </div>
+                    <img src="./assets/img/jeun.png" alt="" srcset="" class="w-[10px] col-start-5 row-start-1 mt-1">
+                    <img  src="./assets/img/amine-removebg-preview.png" class=" w-full bg-white/70 col-span-5 col-start-4 row-start-2  row-span-5   rounded-tl-[30px] rounded-br-[30px]  h-[79px] mt-[2px]    ">
+                    <span class="col-span-5 col-start-4 row-start-6 row-span-1 text-[10px]  text-center text-black  bg-white/30 rounded-[5px] z-10" style="font-family: Roboto;">C.Ronaldo</span>
+                    <hr class=" z-10 border-red-500 row-start-7  col-span-7 col-start-2">
+                    <table class="bg-white/20 row-start-7 row-span-2 col-start-2 col-span-7 text-[6px]  rounded-tr-[10px] rounded-bl-[10px] font-[Latin]">
+                        <tr>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th class="border-l-[0.5px]  border-red-500 rounded-tl-[10px] ">pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                        </tr>
+                        <tr >
+                            <th>90</th>
+                            <th>90</th>
+                            <th>90</th>
+                            <th class="border-l-[1px] border-red-500">90</th>
+                            <th>90</th>
+                            <th>90</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center "> 
+                    <img src="./assets/img/edit.png" class="" alt="">
+                    <img src="./assets/img/change.png" class="" alt="">
+                    <img src="./assets/img/de.webp" class=" w-[16px]" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-row justify-between">
+            <div class="border-2 border-blue-500 flex scale-[0.75] " style=" perspective: 500px;">
+                <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout ">
+                    <div class=" col-start-2  col-span-2 row-start-2 row-span-5 bg-white/15  rounded-t-[4px] r flex flex-col items-center">
+                        <span>90</span>
+                        <span class="mt-[-8px] text-[10px]">cmp</span>
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] mb-[2px] w-9/12" src="./ar.webp" alt="">
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] w-9/12" src="./ar.webp" alt="">
+                    </div>
+                    <img src="./assets/img/jeun.png" alt="" srcset="" class="w-[10px] col-start-5 row-start-1 mt-1">
+                    <img  src="./assets/img/amine-removebg-preview.png" class=" w-full bg-white/70 col-span-5 col-start-4 row-start-2  row-span-5   rounded-tl-[30px] rounded-br-[30px]  h-[79px] mt-[2px]    ">
+                    <span class="col-span-5 col-start-4 row-start-6 row-span-1 text-[10px]  text-center text-black  bg-white/30 rounded-[5px] z-10" style="font-family: Roboto;">C.Ronaldo</span>
+                    <hr class=" z-10 border-red-500 row-start-7  col-span-7 col-start-2">
+                    <table class="bg-white/20 row-start-7 row-span-2 col-start-2 col-span-7 text-[6px]  rounded-tr-[10px] rounded-bl-[10px] font-[Latin]">
+                        <tr>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th class="border-l-[0.5px]  border-red-500 rounded-tl-[10px] ">pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                        </tr>
+                        <tr >
+                            <th>90</th>
+                            <th>90</th>
+                            <th>90</th>
+                            <th class="border-l-[1px] border-red-500">90</th>
+                            <th>90</th>
+                            <th>90</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center "> 
+                    <img src="./assets/img/edit.png" class="" alt="">
+                    <img src="./assets/img/change.png" class="" alt="">
+                    <img src="./assets/img/de.webp" class=" w-[16px]" alt="">
+                </div>
+            </div>
+            <div class="border-2 border-blue-500 flex scale-[0.75] " style=" perspective: 500px;">
+                <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout ">
+                    <div class=" col-start-2  col-span-2 row-start-2 row-span-5 bg-white/15  rounded-t-[4px] r flex flex-col items-center">
+                        <span>90</span>
+                        <span class="mt-[-8px] text-[10px]">cmp</span>
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] mb-[2px] w-9/12" src="./ar.webp" alt="">
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] w-9/12" src="./ar.webp" alt="">
+                    </div>
+                    <img src="./assets/img/jeun.png" alt="" srcset="" class="w-[10px] col-start-5 row-start-1 mt-1">
+                    <img  src="./assets/img/amine-removebg-preview.png" class=" w-full bg-white/70 col-span-5 col-start-4 row-start-2  row-span-5   rounded-tl-[30px] rounded-br-[30px]  h-[79px] mt-[2px]    ">
+                    <span class="col-span-5 col-start-4 row-start-6 row-span-1 text-[10px]  text-center text-black  bg-white/30 rounded-[5px] z-10" style="font-family: Roboto;">C.Ronaldo</span>
+                    <hr class=" z-10 border-red-500 row-start-7  col-span-7 col-start-2">
+                    <table class="bg-white/20 row-start-7 row-span-2 col-start-2 col-span-7 text-[6px]  rounded-tr-[10px] rounded-bl-[10px] font-[Latin]">
+                        <tr>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th class="border-l-[0.5px]  border-red-500 rounded-tl-[10px] ">pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                        </tr>
+                        <tr >
+                            <th>90</th>
+                            <th>90</th>
+                            <th>90</th>
+                            <th class="border-l-[1px] border-red-500">90</th>
+                            <th>90</th>
+                            <th>90</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center "> 
+                    <img src="./assets/img/edit.png" class="" alt="">
+                    <img src="./assets/img/change.png" class="" alt="">
+                    <img src="./assets/img/de.webp" class=" w-[16px]" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-row justify-evenly">
+            <div class="border-2 border-blue-500 flex  scale-[0.75]" style=" perspective: 500px;">
+                <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout ">
+                    <div class=" col-start-2  col-span-2 row-start-2 row-span-5 bg-white/15  rounded-t-[4px] r flex flex-col items-center">
+                        <span>90</span>
+                        <span class="mt-[-8px] text-[10px]">cmp</span>
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] mb-[2px] w-9/12" src="./ar.webp" alt="">
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] w-9/12" src="./ar.webp" alt="">
+                    </div>
+                    <img src="./assets/img/jeun.png" alt="" srcset="" class="w-[10px] col-start-5 row-start-1 mt-1">
+                    <img  src="./assets/img/amine-removebg-preview.png" class=" w-full bg-white/70 col-span-5 col-start-4 row-start-2  row-span-5   rounded-tl-[30px] rounded-br-[30px]  h-[79px] mt-[2px]    ">
+                    <span class="col-span-5 col-start-4 row-start-6 row-span-1 text-[10px]  text-center text-black  bg-white/30 rounded-[5px] z-10" style="font-family: Roboto;">C.Ronaldo</span>
+                    <hr class=" z-10 border-red-500 row-start-7  col-span-7 col-start-2">
+                    <table class="bg-white/20 row-start-7 row-span-2 col-start-2 col-span-7 text-[6px]  rounded-tr-[10px] rounded-bl-[10px] font-[Latin]">
+                        <tr>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th class="border-l-[0.5px]  border-red-500 rounded-tl-[10px] ">pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                        </tr>
+                        <tr >
+                            <th>90</th>
+                            <th>90</th>
+                            <th>90</th>
+                            <th class="border-l-[1px] border-red-500">90</th>
+                            <th>90</th>
+                            <th>90</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center "> 
+                    <img src="./assets/img/edit.png" class="" alt="">
+                    <img src="./assets/img/change.png" class="" alt="">
+                    <img src="./assets/img/de.webp" class=" w-[16px]" alt="">
+                </div>
+            </div>
+            <div class="border-2 border-blue-500 flex scale-[0.75] " style=" perspective: 500px;">
+                <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout ">
+                    <div class=" col-start-2  col-span-2 row-start-2 row-span-5 bg-white/15  rounded-t-[4px] r flex flex-col items-center">
+                        <span>90</span>
+                        <span class="mt-[-8px] text-[10px]">cmp</span>
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] mb-[2px] w-9/12" src="./ar.webp" alt="">
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] w-9/12" src="./ar.webp" alt="">
+                    </div>
+                    <img src="./assets/img/jeun.png" alt="" srcset="" class="w-[10px] col-start-5 row-start-1 mt-1">
+                    <img  src="./assets/img/amine-removebg-preview.png" class=" w-full bg-white/70 col-span-5 col-start-4 row-start-2  row-span-5   rounded-tl-[30px] rounded-br-[30px]  h-[79px] mt-[2px]    ">
+                    <span class="col-span-5 col-start-4 row-start-6 row-span-1 text-[10px]  text-center text-black  bg-white/30 rounded-[5px] z-10" style="font-family: Roboto;">C.Ronaldo</span>
+                    <hr class=" z-10 border-red-500 row-start-7  col-span-7 col-start-2">
+                    <table class="bg-white/20 row-start-7 row-span-2 col-start-2 col-span-7 text-[6px]  rounded-tr-[10px] rounded-bl-[10px] font-[Latin]">
+                        <tr>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th class="border-l-[0.5px]  border-red-500 rounded-tl-[10px] ">pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                        </tr>
+                        <tr >
+                            <th>90</th>
+                            <th>90</th>
+                            <th>90</th>
+                            <th class="border-l-[1px] border-red-500">90</th>
+                            <th>90</th>
+                            <th>90</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center "> 
+                    <img src="./assets/img/edit.png" class="" alt="">
+                    <img src="./assets/img/change.png" class="" alt="">
+                    <img src="./assets/img/de.webp" class=" w-[16px]" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-row justify-center">    
+            <div class="border-2 border-blue-500 flex scale-[0.75] " style=" perspective: 500px;">
+                <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout ">
+                    <div class=" col-start-2  col-span-2 row-start-2 row-span-5 bg-white/15  rounded-t-[4px] r flex flex-col items-center">
+                        <span>90</span>
+                        <span class="mt-[-8px] text-[10px]">cmp</span>
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] mb-[2px] w-9/12" src="./ar.webp" alt="">
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] w-9/12" src="./ar.webp" alt="">
+                    </div>
+                    <img src="./assets/img/jeun.png" alt="" srcset="" class="w-[10px] col-start-5 row-start-1 mt-1">
+                    <img  src="./assets/img/amine-removebg-preview.png" class=" w-full bg-white/70 col-span-5 col-start-4 row-start-2  row-span-5   rounded-tl-[30px] rounded-br-[30px]  h-[79px] mt-[2px]    ">
+                    <span class="col-span-5 col-start-4 row-start-6 row-span-1 text-[10px]  text-center text-black  bg-white/30 rounded-[5px] z-10" style="font-family: Roboto;">C.Ronaldo</span>
+                    <hr class=" z-10 border-red-500 row-start-7  col-span-7 col-start-2">
+                    <table class="bg-white/20 row-start-7 row-span-2 col-start-2 col-span-7 text-[6px]  rounded-tr-[10px] rounded-bl-[10px] font-[Latin]">
+                        <tr>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                            <th class="border-l-[0.5px]  border-red-500 rounded-tl-[10px] ">pac</th>
+                            <th>pac</th>
+                            <th>pac</th>
+                        </tr>
+                        <tr >
+                            <th>90</th>
+                            <th>90</th>
+                            <th>90</th>
+                            <th class="border-l-[1px] border-red-500">90</th>
+                            <th>90</th>
+                            <th>90</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center "> 
+                    <img src="./assets/img/edit.png" class="" alt="">
+                    <img src="./assets/img/change.png" class="" alt="">
+                    <img src="./assets/img/de.webp" class=" w-[16px]" alt="">
+                </div>
+            </div>
+        </div>
         </article>
     </section>
 </body>

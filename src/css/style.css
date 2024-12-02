@@ -11,9 +11,25 @@
     /* position: absolute ; */
     margin-bottom: 230px; 
 }
-#tirane{
+/* #tirane{
     background-image: url("./../../assets/img/tirane.png");
     transform: rotateX(30deg);
     background-size: 100% 100%;
 
+} */
+
+.tirane{
+    transform: rotateX(40deg); z-index: -1;
+    @media only screen and (max-width: 1100px) {
+        transform: rotateX(00deg);
+      }
+      @media only screen and (max-width:  768px) {
+          transform: rotateX(00deg);
+        }
 }
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
