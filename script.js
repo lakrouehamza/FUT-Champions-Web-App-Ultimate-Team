@@ -12,24 +12,41 @@ if(card.hasChildNodes()){
 card.parentNode.querySelector('#modifyCard').querySelector('img[src="./assets/img/edit.png"]').addEventListener('click', function(){
     document.getElementById('modal').classList.remove('hidden');
 
-let lesInput = querySelectorAll('form input ,form select');
+let lesInput = document.querySelectorAll('form input ,form select');
+let liste =card.querySelectorAll('span,img,th');
+lesInput[0].value=liste[5].textContent;
+lesInput[1].value=liste[1].textContent;
+lesInput[2].value=liste[12].textContent;
+lesInput[3].value=liste[13].textContent;
+lesInput[4].value=liste[14].textContent;
+lesInput[5].value=liste[15].textContent;
+lesInput[6].value=liste[16].textContent;
+lesInput[7].value=liste[17].textContent;
+lesInput[8].value=liste[2].src;
+lesInput[9].value=liste[4].src;
+lesInput[10].value=liste[3].src;
+lesInput[11].value=liste[0].textContent;
+
+console.log(liste + ' =>   '+ lesInput);
+
 
 
 });
 
 card.parentNode.querySelector('#modifyCard').querySelector('img[src="./assets/img/change.png"]').addEventListener('click', function(){
-    console.log('change')
+    console.log('change');
 });
 
 card.parentNode.querySelector('#modifyCard').querySelector('img[src="./assets/img/de.webp"]').addEventListener('click', function(){
     card.innerHTML='';
-    card.
-    listePlayer=listePlayer.filter(item => item.mane !== 'hamza')
+    card.parentNode.querySelector('#modifyCard').classList.add('hidden');
 });
 });
 function compar(card ,object){
-    let listeformation =card.querySelectorAll('img ,span');
-    if(object.name!==listeformation[])
+    let listeformation =card.querySelectorAll('span');
+    if(object.note !== listeformation[0].textContent.trim() && object.position !== listeformation[1].textContent.trim() && object.name !== listeformation[2].textContent.trim())
+        return true;
+    return false;
 }
 
 function fermeModal(){
@@ -139,16 +156,16 @@ document.getElementById('submit').addEventListener('click', (e) => {
         }
         listePlayer.push(objectJouer);
         
-        ajoute();
+        ajoute(objectJouer);
     } 
      
 });
  
 
-function ajoute() {
+function ajoute(player) {
     let test= true;
+        // listePlayer.forEach(player => {
     document.querySelectorAll('.cardAjout').forEach(card => {
-        listePlayer.forEach(player => {
             console.log(listePlayer);
             if (player.position === card.parentNode.id) {
                 let pos = position[player.position];
@@ -185,7 +202,6 @@ function ajoute() {
                     </table>
                 `;
                 
-                // Check for empty content before replacing
                 if (card.innerHTML.trim() === '') {
                     card.innerHTML = formation;
                 } else {
@@ -201,11 +217,17 @@ function ajoute() {
                 }
             }
         });
-    });
+    // });
     
 
-    if(listePlayer.length>18)
-        alert("pppp");
+    let liste = document.querySelectorAll('.cardAjout');
+    let index = 0;
+    for(let i = 0 ;i <liste.length ; i++){
+        if(liste.innerHTML!='')
+            index++;
+    }
+    if(index>=11)
+        alert('Le onze de départ est complet');
 }
 
 
