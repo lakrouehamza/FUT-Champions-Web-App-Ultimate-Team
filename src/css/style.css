@@ -11,12 +11,6 @@
     /* position: absolute ; */
     margin-bottom: 230px; 
 }
-/* #tirane{
-    background-image: url("./../../assets/img/tirane.png");
-    transform: rotateX(30deg);
-    background-size: 100% 100%;
-
-} */
 
 .tirane{
     transform: rotateX(40deg); z-index: -1;
@@ -33,3 +27,66 @@
       background-color: lightblue;
     }
   }
+
+  .cardAjout{
+      
+  animation: cardAjout 2.5s linear ;
+  }
+ 
+      @keyframes cardAjout {
+  0% {
+      transform:  rotateY(0deg);
+      transform:  rotateX(10deg);
+  }
+  10% { 
+      transform:  rotateY(10deg);
+      transform:  rotateX(10deg);
+  }
+  20% {
+      transform:  rotateY(40deg);
+  }
+  30% {
+      transform:  rotateY(90deg);
+      transform:  rotateX(50deg);
+  
+  }
+  40% {
+      background: conic-gradient(from 0deg, #1e0ab4, #ffffff, #11d6d6, #7d011c, #aff524, #383c2d); 
+      transform:  rotateY(120deg);
+  }
+  43%{
+      
+      background: conic-gradient(from 0deg, #1e0ab4, #bccb18, #72041e, #37023a, #4c05a3, #68831d); 
+  }
+  45%{
+      
+      background: conic-gradient(from 0deg, #ea1f1f, #115275, #370110, #dba70b, #911057, #520404); 
+  }
+  46%{
+      
+      background: conic-gradient(from 0deg, #1e0ab4, #ffffff, #11d6d6, #7d011c, #aff524, #383c2d); 
+  }
+  50% {
+      background: conic-gradient(from 0deg, #7d011c, #aff524, #383c2d, #1e0ab4, #ffffff, #11d6d6); 
+      transform:  rotateY(50deg);
+  }
+  60% {  
+      transform:  rotateY(190deg);
+  }
+  70% {  
+      transform:  rotateY(210deg);
+  }
+  80% { 
+      transform:  rotateY(250deg);
+  }
+  90% {  
+      transform:  rotateY(300deg);
+  }
+  100% {  
+      transform:  rotateY(360deg);
+  }
+}
+.player{
+  perspective: 500px;
+}
+

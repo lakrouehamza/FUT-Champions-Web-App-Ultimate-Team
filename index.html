@@ -6,71 +6,8 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <style>
-        .cardAjout{
-            /* background: conic-gradient(from 0deg, #f000ff, #f0000f, #323258, #a76d7a, #aff524, #33ff00); */
-            
-        animation: cardAjout 2.5s linear ;
-        }
-       
-            @keyframes cardAjout {
-        0% {
-            transform:  rotateY(0deg);
-            transform:  rotateX(10deg);
-        }
-        10% { 
-            transform:  rotateY(10deg);
-            transform:  rotateX(10deg);
-        }
-        20% {
-            transform:  rotateY(40deg);
-        }
-        30% {
-            transform:  rotateY(90deg);
-            transform:  rotateX(50deg);
-        
-        }
-        40% {
-            background: conic-gradient(from 0deg, #1e0ab4, #ffffff, #11d6d6, #7d011c, #aff524, #383c2d); 
-            transform:  rotateY(120deg);
-        }
-        43%{
-            
-            background: conic-gradient(from 0deg, #1e0ab4, #bccb18, #72041e, #37023a, #4c05a3, #68831d); 
-        }
-        45%{
-            
-            background: conic-gradient(from 0deg, #ea1f1f, #115275, #370110, #dba70b, #911057, #520404); 
-        }
-        46%{
-            
-            background: conic-gradient(from 0deg, #1e0ab4, #ffffff, #11d6d6, #7d011c, #aff524, #383c2d); 
-        }
-        50% {
-            background: conic-gradient(from 0deg, #7d011c, #aff524, #383c2d, #1e0ab4, #ffffff, #11d6d6); 
-            transform:  rotateY(50deg);
-        }
-        60% {  
-            transform:  rotateY(190deg);
-        }
-        70% {  
-            transform:  rotateY(210deg);
-        }
-        80% { 
-            transform:  rotateY(250deg);
-        }
-        90% {  
-            transform:  rotateY(300deg);
-        }
-        100% {  
-            transform:  rotateY(360deg);
-        }
-    }
-    .player{
-        perspective: 500px;
-    }
-    
-    </style>
+    <link rel="stylesheet" href="./src/css/style.css">
+
 </head>
 <body>
 
@@ -130,15 +67,15 @@
                     <select name="position" id="position" class="border p-3 shadow-md  border-gray-700 placeholder:text-base focus:outline-none ease-in-out duration-300 rounded-lg w-full">
                         <option value="position">position</option>
                                 <option value="GK">GK</option>
-                                <option value="CB">CBL</option>
-                                <option value="CB">CBR</option>
+                                <option value="CBL">CBL</option>
+                                <option value="CBR">CBR</option>
                                 <option value="LB">LB</option>
                                 <option value="RB">RB</option>
                                 <option value="CDM">CDM</option>
                                 <option value="LM">LM</option>
                                 <option value="RM">RM</option>
-                                <option value="CM">CML</option>
-                                <option value="CM">CMR</option>
+                                <option value="CML">CML</option>
+                                <option value="CMR">CMR</option>
                                 <option value="ST">ST</option>
                     </select>
                     <table id="competence">
@@ -149,255 +86,84 @@
                     <label htmlFor="nationalité" class="mb-2 text-gray-400 text-lg">nationalité<span class="text-red-600 inline-block p-1 text-sm">*</span></label>
                           <select name="nationalite" id="nationalite" class="border p-3  border-gray-700 shadow-md placeholder:text-base focus:outline-none ease-in-out duration-300 rounded-lg w-full">
                             <option value="nationalite" selected="selected">nationalite </option>
-                            <option value="Afghanistan">Afghanistan </option>
-                            <option value="Afrique_Centrale">Afrique_Centrale </option>
-                            <option value="Afrique_du_sud">Afrique_du_Sud </option>
-                            <option value="Albanie">Albanie </option>
-                            <option value="Algerie">Algerie </option>
-                            <option value="Allemagne">Allemagne </option>
-                            <option value="Andorre">Andorre </option>
-                            <option value="Angola">Angola </option>
-                            <option value="Anguilla">Anguilla </option>
-                            <option value="Arabie_Saoudite">Arabie_Saoudite </option>
-                            <option value="Argentine">Argentine </option>
-                            <option value="Armenie">Armenie </option>
-                            <option value="Australie">Australie </option>
-                            <option value="Autriche">Autriche </option>
+                            <option value="Afghanistan">Afghanistan </option> 
+                            <option value="Albanie">Albanie </option> 
+                            <option value="Andorre">Andorre </option> 
+                            <option value="Anguilla">Anguilla </option> 
+                            <option value="Argentine">Argentine </option> 
+                            <option value="Australie">Australie </option> 
                             <option value="Azerbaidjan">Azerbaidjan </option>
                             
-                            <option value="Bahamas">Bahamas </option>
-                            <option value="Bangladesh">Bangladesh </option>
-                            <option value="Barbade">Barbade </option>
-                            <option value="Bahrein">Bahrein </option>
+                            <option value="Bahamas">Bahamas </option> 
                             <option value="Belgique">Belgique </option>
-                            <option value="Belize">Belize </option>
-                            <option value="Benin">Benin </option>
-                            <option value="Bermudes">Bermudes </option>
+                            <option value="Belize">Belize </option> 
                             <option value="Bielorussie">Bielorussie </option>
-                            <option value="Bolivie">Bolivie </option>
-                            <option value="Botswana">Botswana </option>
-                            <option value="Bhoutan">Bhoutan </option>
-                            <option value="Boznie_Herzegovine">Boznie_Herzegovine </option>
-                            <option value="Bresil">Bresil </option>
-                            <option value="Brunei">Brunei </option>
-                            <option value="Bulgarie">Bulgarie </option>
-                            <option value="Burkina_Faso">Burkina_Faso </option>
-                            <option value="Burundi">Burundi </option>
-                            <option value="Caiman">Caiman </option>
-                            <option value="Cambodge">Cambodge </option>
-                            <option value="Cameroun">Cameroun </option>
-                            <option value="Canada">Canada </option>
-                            <option value="Canaries">Canaries </option>
-                            <option value="Cap_vert">Cap_Vert </option>
-                            <option value="Chili">Chili </option>
-                            <option value="Chine">Chine </option>
-                            <option value="Chypre">Chypre </option>
-                            <option value="Colombie">Colombie </option>
-                            <option value="Comores">Colombie </option>
-                            <option value="Congo">Congo </option>
-                            <option value="Congo_democratique">Congo_democratique </option>
-                            <option value="Cook">Cook </option>
-                            <option value="Coree_du_Nord">Coree_du_Nord </option>
-                            <option value="Coree_du_Sud">Coree_du_Sud </option>
-                            <option value="Costa_Rica">Costa_Rica </option>
-                            <option value="Cote_d_Ivoire">Côte_d_Ivoire </option>
+                            <option value="Bolivie">Bolivie </option> 
+                            <option value="Bhoutan">Bhoutan </option> 
+                            <option value="Bresil">Bresil </option> 
+                            <option value="Bulgarie">Bulgarie </option> 
+                            <option value="Caiman">Caiman </option> 
+                            <option value="Chili">Chili </option> 
+                            <option value="Colombie">Colombie </option> 
                             <option value="Croatie">Croatie </option>
                             <option value="Cuba">Cuba </option>
-                            
                             <option value="Danemark">Danemark </option>
                             <option value="Djibouti">Djibouti </option>
                             <option value="Dominique">Dominique </option>
-                            
                             <option value="Egypte">Egypte </option>
                             <option value="Emirats_Arabes_Unis">Emirats_Arabes_Unis </option>
                             <option value="Equateur">Equateur </option>
                             <option value="Erythree">Erythree </option>
-                            <option value="Espagne">Espagne </option>
-                            <option value="Estonie">Estonie </option>
-                            <option value="Etats_Unis">Etats_Unis </option>
-                            <option value="Ethiopie">Ethiopie </option>
-                            
-                            <option value="Falkland">Falkland </option>
-                            <option value="Feroe">Feroe </option>
-                            <option value="Fidji">Fidji </option>
+                            <option value="Espagne">Espagne </option>  
                             <option value="Finlande">Finlande </option>
                             <option value="France">France </option>
                         
-                            <option value="Gabon">Gabon </option>
-                            <option value="Gambie">Gambie </option>
+                            <option value="Gabon">Gabon </option> 
                             <option value="Georgie">Georgie </option>
                             <option value="Ghana">Ghana </option>
                             <option value="Gibraltar">Gibraltar </option>
-                            <option value="Grece">Grece </option>
-                            <option value="Grenade">Grenade </option>
-                            <option value="Groenland">Groenland </option>
-                            <option value="Guadeloupe">Guadeloupe </option>
-                            <option value="Guam">Guam </option>
-                            <option value="Guatemala">Guatemala</option>
-                            <option value="Guernesey">Guernesey </option>
-                            <option value="Guinee">Guinee </option>
-                            <option value="Guinee_Bissau">Guinee_Bissau </option>
-                            <option value="Guinee equatoriale">Guinee_Equatoriale </option>
-                            <option value="Guyana">Guyana </option>
-                            <option value="Guyane_Francaise ">Guyane_Francaise </option>
+                            <option value="Grece">Grece </option> 
+                            <option value="Guadeloupe">Guadeloupe </option>  
+                            <option value="Honduras">Honduras </option> 
                             
-                            <option value="Haiti">Haiti </option>
-                            <option value="Hawaii">Hawaii </option>
-                            <option value="Honduras">Honduras </option>
-                            <option value="Hong_Kong">Hong_Kong </option>
-                            <option value="Hongrie">Hongrie </option>
-                            
-                            <option value="Inde">Inde </option>
-                            <option value="Indonesie">Indonesie </option>
+                            <option value="Inde">Inde </option> 
                             <option value="Iran">Iran </option>
-                            <option value="Iraq">Iraq </option>
-                            <option value="Irlande">Irlande </option>
-                            <option value="Islande">Islande </option>
+                            <option value="Iraq">Iraq </option> 
                             <option value="Israel">Israel </option>
-                            <option value="Italie">italie </option>
-                            
-                            <option value="Jamaique">Jamaique </option>
-                            <option value="Jan Mayen">Jan Mayen </option>
+                            <option value="Italie">italie </option> 
                             <option value="Japon">Japon </option>
                             <option value="Jersey">Jersey </option>
                             <option value="Jordanie">Jordanie </option>
                             
                             <option value="Kazakhstan">Kazakhstan </option>
-                            <option value="Kenya">Kenya </option>
-                            <option value="Kirghizstan">Kirghizistan </option>
-                            <option value="Kiribati">Kiribati </option>
-                            <option value="Koweit">Koweit </option>
-                            
-                            <option value="Laos">Laos </option>
-                            <option value="Lesotho">Lesotho </option>
-                            <option value="Lettonie">Lettonie </option>
-                            <option value="Liban">Liban </option>
-                            <option value="Liberia">Liberia </option>
-                            <option value="Liechtenstein">Liechtenstein </option>
-                            <option value="Lituanie">Lituanie </option>
-                            <option value="Luxembourg">Luxembourg </option>
+                            <option value="Kenya">Kenya </option>  
                             <option value="Lybie">Lybie </option>
-                            
-                            <option value="Macao">Macao </option>
-                            <option value="Macedoine">Macedoine </option>
-                            <option value="Madagascar">Madagascar </option>
-                            <option value="Madère">Madère </option>
-                            <option value="Malaisie">Malaisie </option>
-                            <option value="Malawi">Malawi </option>
-                            <option value="Maldives">Maldives </option>
-                            <option value="Mali">Mali </option>
-                            <option value="Malte">Malte </option>
-                            <option value="Man">Man </option>
-                            <option value="Mariannes du Nord">Mariannes du Nord </option>
-                            <option value="Maroc">Maroc </option>
-                            <option value="Marshall">Marshall </option>
-                            <option value="Martinique">Martinique </option>
-                            <option value="Maurice">Maurice </option>
-                            <option value="Mauritanie">Mauritanie </option>
-                            <option value="Mayotte">Mayotte </option>
-                            <option value="Mexique">Mexique </option>
-                            <option value="Micronesie">Micronesie </option>
-                            <option value="Midway">Midway </option>
-                            <option value="Moldavie">Moldavie </option>
-                            <option value="Monaco">Monaco </option>
-                            <option value="Mongolie">Mongolie </option>
-                            <option value="Montserrat">Montserrat </option>
+                             
+                            <option value="Maroc">Maroc </option> 
+                            <option value="Mexique">Mexique </option> 
                             <option value="Mozambique">Mozambique </option>
                             
-                            <option value="Namibie">Namibie </option>
-                            <option value="Nauru">Nauru </option>
-                            <option value="Nepal">Nepal </option>
-                            <option value="Nicaragua">Nicaragua </option>
-                            <option value="Niger">Niger </option>
-                            <option value="Nigeria">Nigeria </option>
-                            <option value="Niue">Niue </option>
-                            <option value="Norfolk">Norfolk </option>
-                            <option value="Norvege">Norvege </option>
-                            <option value="Nouvelle_Caledonie">Nouvelle_Caledonie </option>
-                            <option value="Nouvelle_Zelande">Nouvelle_Zelande </option>
-                            
-                            <option value="Oman">Oman </option>
-                            <option value="Ouganda">Ouganda </option>
-                            <option value="Ouzbekistan">Ouzbekistan </option>
-                            
-                            <option value="Pakistan">Pakistan </option>
-                            <option value="Palau">Palau </option>
-                            <option value="Palestine">Palestine </option>
-                            <option value="Panama">Panama </option>
-                            <option value="Papouasie_Nouvelle_Guinee">Papouasie_Nouvelle_Guinee </option>
-                            <option value="Paraguay">Paraguay </option>
-                            <option value="Pays_Bas">Pays_Bas </option>
-                            <option value="Perou">Perou </option>
-                            <option value="Philippines">Philippines </option>
-                            <option value="Pologne">Pologne </option>
-                            <option value="Polynesie">Polynesie </option>
-                            <option value="Porto_Rico">Porto_Rico </option>
+                            <option value="Namibie">Namibie </option>  
+                            <option value="Nigeria">Nigeria </option> 
+                    
                             <option value="Portugal">Portugal </option>
                             
                             <option value="Qatar">Qatar </option>
-                            
-                            <option value="Republique_Dominicaine">Republique_Dominicaine </option>
-                            <option value="Republique_Tcheque">Republique_Tcheque </option>
-                            <option value="Reunion">Reunion </option>
-                            <option value="Roumanie">Roumanie </option>
-                            <option value="Royaume_Uni">Royaume_Uni </option>
+                             
+                            <option value="Roumanie">Roumanie </option> 
                             <option value="Russie">Russie </option>
                             <option value="Rwanda">Rwanda </option>
-                            
-                            <option value="Sahara Occidental">Sahara Occidental </option>
-                            <option value="Sainte_Lucie">Sainte_Lucie </option>
-                            <option value="Saint_Marin">Saint_Marin </option>
-                            <option value="Salomon">Salomon </option>
-                            <option value="Salvador">Salvador </option>
-                            <option value="Samoa_Occidentales">Samoa_Occidentales</option>
-                            <option value="Samoa_Americaine">Samoa_Americaine </option>
-                            <option value="Sao_Tome_et_Principe">Sao_Tome_et_Principe </option>
-                            <option value="Senegal">Senegal </option>
-                            <option value="Seychelles">Seychelles </option>
-                            <option value="Sierra Leone">Sierra Leone </option>
-                            <option value="Singapour">Singapour </option>
-                            <option value="Slovaquie">Slovaquie </option>
-                            <option value="Slovenie">Slovenie</option>
-                            <option value="Somalie">Somalie </option>
-                            <option value="Soudan">Soudan </option>
-                            <option value="Sri_Lanka">Sri_Lanka </option>
-                            <option value="Suede">Suede </option>
-                            <option value="Suisse">Suisse </option>
-                            <option value="Surinam">Surinam </option>
-                            <option value="Swaziland">Swaziland </option>
-                            <option value="Syrie">Syrie </option>
-                            
-                            <option value="Tadjikistan">Tadjikistan </option>
-                            <option value="Taiwan">Taiwan </option>
-                            <option value="Tonga">Tonga </option>
-                            <option value="Tanzanie">Tanzanie </option>
-                            <option value="Tchad">Tchad </option>
-                            <option value="Thailande">Thailande </option>
-                            <option value="Tibet">Tibet </option>
-                            <option value="Timor_Oriental">Timor_Oriental </option>
-                            <option value="Togo">Togo </option>
-                            <option value="Trinite_et_Tobago">Trinite_et_Tobago </option>
-                            <option value="Tristan da cunha">Tristan de cuncha </option>
-                            <option value="Tunisie">Tunisie </option>
-                            <option value="Turkmenistan">Turmenistan </option>
+                               
+                            <option value="Soudan">Soudan </option> 
+                             
+                            <option value="Tanzanie">Tanzanie </option> 
                             <option value="Turquie">Turquie </option>
                             
-                            <option value="Ukraine">Ukraine </option>
-                            <option value="Uruguay">Uruguay </option>
+                            <option value="Ukraine">Ukraine </option> 
                             
-                            <option value="Vanuatu">Vanuatu </option>
-                            <option value="Vatican">Vatican </option>
-                            <option value="Venezuela">Venezuela </option>
-                            <option value="Vierges_Americaines">Vierges_Americaines </option>
-                            <option value="Vierges_Britanniques">Vierges_Britanniques </option>
+                            <option value="Vanuatu">Vanuatu </option> 
                             <option value="Vietnam">Vietnam </option>
-                            
-                            <option value="Wake">Wake </option>
-                            <option value="Wallis et Futuma">Wallis et Futuma </option>
-                            
-                            <option value="Yemen">Yemen </option>
-                            <option value="Yougoslavie">Yougoslavie </option>
-                            
+                             
                             <option value="Zambie">Zambie </option>
                             <option value="Zimbabwe">Zimbabwe </option>
                           </select>   
@@ -437,7 +203,7 @@
       
               <div aria-hidden="true" class="border-b border-gray-700 px-2"></div>
               <div class="px-6 py-2">
-                <div class="grid gap-2 grid-cols-[repeat(auto-fit,minmax(0,1fr))]">
+                <div class="grid gap-2 grid-cols-[repeat(auto-fit,minmax(0,1fr))]" id="divSave">
                   <button type="button" onclick="fermeModal()"
                             class="inline-flex items-center justify-center py-1 gap-1 font-medium rounded-lg border transition-colors outline-none focus:ring-offset-2 focus:ring-2 focus:ring-inset dark:focus:ring-offset-0 min-h-[2.25rem] px-4 text-sm text-gray-800 bg-white border-gray-300 hover:bg-gray-50 focus:ring-primary-600 focus:text-primary-600 focus:bg-primary-50 focus:border-primary-600 dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-600 dark:hover:border-gray-500 dark:text-gray-200 dark:focus:text-primary-400 dark:focus:border-primary-400 dark:focus:bg-gray-800">
                             Cancel
@@ -448,7 +214,7 @@
       
                             <span class="flex items-center gap-1">
                               <span class="">
-                                Send
+                                add player
                               </span>
                             </span>
                           </button>
@@ -460,7 +226,222 @@
       </div>
      <!-- end modale -->
 
-    <section class="  mx-auto my-auto h-vh w-full border-2 flex  mt-auto justify-center  border-blue-500 justify-center aling-items  "style="perspective: 1000px;">
+         <!-- modaleEdit -->
+    <div class="fixed inset-0 z-40 min-h-full overflow-y-auto overflow-x-hidden  hidden transition flex items-center" id="modalEdit">
+        <!-- overlay -->
+        <div aria-hidden="true" class="fixed inset-0 w-full h-full bg-black/50 cursor-pointer">
+        </div>
+      
+        <!-- Modal -->
+        <div class="relative w-full cursor-pointer pointer-events-none transition my-auto p-4">
+          <div
+            class="w-full py-2 bg-white cursor-default pointer-events-auto dark:bg-gray-800 relative rounded-xl mx-auto max-w-sm">
+      
+            <button type="button" class="absolute top-2 right-2 rtl:right-auto rtl:left-2" onclick="fermeModalED()">
+                      <svg xlinkTitle="Close" class="h-4 w-4 hover:rotate-180 transition-all ease-in-out duration-500 cursor-pointer text-gray-400"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fillRule="evenodd"
+                          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                          clipRule="evenodd"></path>
+                      </svg>
+                      <span class="sr-only">
+                        Close
+                      </span>
+                    </button>
+      
+      
+      
+            <div class="space-y-2 p-2">
+              <div class="p-2 space-y-2 text-center dark:text-white">
+                <h2 class="text-xl font-bold tracking-tight" id="page-action.heading">
+                  Let me reach you
+                </h2>
+                <p class="text-gray-500">
+                  Are you sure you would like to do this?
+                </p>
+              </div>
+            </div>
+      
+            <div class="space-y-2">
+              <div aria-hidden="true" class="border-t border-gray-700 px-2"></div>
+      
+              <div class="grid grid-cols-1 place-items-center px-4 py-2">
+                <form noValidate class="space-y-4" id="formAdd">
+                  <div>
+                    <label htmlFor="Name" class="mb-2 text-gray-400 text-lg"> Name<span class="text-red-600 inline-block p-1 text-sm">*</span></label>
+                    <input
+                              id="name"
+                              class="border p-3 shadow-md  border-gray-700 placeholder:text-base focus:outline-none ease-in-out duration-300 rounded-lg w-full"
+                              type="text"
+                              placeholder="Name"
+                              required
+                            />
+                  </div>
+                  <div>
+                    <label htmlFor="position" class="mb-2 text-gray-400 text-lg">position<span class="text-red-600 inline-block p-1 text-sm">*</span></label>
+                    <select name="position" id="position" class="border p-3 shadow-md  border-gray-700 placeholder:text-base focus:outline-none ease-in-out duration-300 rounded-lg w-full">
+                        <option value="position">position</option>
+                                <option value="GK">GK</option>
+                                <option value="CBL">CBL</option>
+                                <option value="CBR">CBR</option>
+                                <option value="LB">LB</option>
+                                <option value="RB">RB</option>
+                                <option value="CDM">CDM</option>
+                                <option value="LM">LM</option>
+                                <option value="RM">RM</option>
+                                <option value="CML">CML</option>
+                                <option value="CMR">CMR</option>
+                                <option value="ST">ST</option>
+                    </select>
+                    <table id="competence">
+
+                    </table>
+                  </div>
+                  <div>
+                    <label htmlFor="nationalité" class="mb-2 text-gray-400 text-lg">nationalité<span class="text-red-600 inline-block p-1 text-sm">*</span></label>
+                          <select name="nationalite" id="nationalite" class="border p-3  border-gray-700 shadow-md placeholder:text-base focus:outline-none ease-in-out duration-300 rounded-lg w-full">
+                            <option value="nationalite" selected="selected">nationalite </option>
+                            <option value="Afghanistan">Afghanistan </option> 
+                            <option value="Albanie">Albanie </option> 
+                            <option value="Andorre">Andorre </option> 
+                            <option value="Anguilla">Anguilla </option> 
+                            <option value="Argentine">Argentine </option> 
+                            <option value="Australie">Australie </option> 
+                            <option value="Azerbaidjan">Azerbaidjan </option>
+                            
+                            <option value="Bahamas">Bahamas </option> 
+                            <option value="Belgique">Belgique </option>
+                            <option value="Belize">Belize </option> 
+                            <option value="Bielorussie">Bielorussie </option>
+                            <option value="Bolivie">Bolivie </option> 
+                            <option value="Bhoutan">Bhoutan </option> 
+                            <option value="Bresil">Bresil </option> 
+                            <option value="Bulgarie">Bulgarie </option> 
+                            <option value="Caiman">Caiman </option> 
+                            <option value="Chili">Chili </option> 
+                            <option value="Colombie">Colombie </option> 
+                            <option value="Croatie">Croatie </option>
+                            <option value="Cuba">Cuba </option>
+                            <option value="Danemark">Danemark </option>
+                            <option value="Djibouti">Djibouti </option>
+                            <option value="Dominique">Dominique </option>
+                            <option value="Egypte">Egypte </option>
+                            <option value="Emirats_Arabes_Unis">Emirats_Arabes_Unis </option>
+                            <option value="Equateur">Equateur </option>
+                            <option value="Erythree">Erythree </option>
+                            <option value="Espagne">Espagne </option>  
+                            <option value="Finlande">Finlande </option>
+                            <option value="France">France </option>
+                        
+                            <option value="Gabon">Gabon </option> 
+                            <option value="Georgie">Georgie </option>
+                            <option value="Ghana">Ghana </option>
+                            <option value="Gibraltar">Gibraltar </option>
+                            <option value="Grece">Grece </option> 
+                            <option value="Guadeloupe">Guadeloupe </option>  
+                            <option value="Honduras">Honduras </option> 
+                            
+                            <option value="Inde">Inde </option> 
+                            <option value="Iran">Iran </option>
+                            <option value="Iraq">Iraq </option> 
+                            <option value="Israel">Israel </option>
+                            <option value="Italie">italie </option> 
+                            <option value="Japon">Japon </option>
+                            <option value="Jersey">Jersey </option>
+                            <option value="Jordanie">Jordanie </option>
+                            
+                            <option value="Kazakhstan">Kazakhstan </option>
+                            <option value="Kenya">Kenya </option>  
+                            <option value="Lybie">Lybie </option>
+                             
+                            <option value="Maroc">Maroc </option> 
+                            <option value="Mexique">Mexique </option> 
+                            <option value="Mozambique">Mozambique </option>
+                            
+                            <option value="Namibie">Namibie </option>  
+                            <option value="Nigeria">Nigeria </option> 
+                    
+                            <option value="Portugal">Portugal </option>
+                            
+                            <option value="Qatar">Qatar </option>
+                             
+                            <option value="Roumanie">Roumanie </option> 
+                            <option value="Russie">Russie </option>
+                            <option value="Rwanda">Rwanda </option>
+                               
+                            <option value="Soudan">Soudan </option> 
+                             
+                            <option value="Tanzanie">Tanzanie </option> 
+                            <option value="Turquie">Turquie </option>
+                            
+                            <option value="Ukraine">Ukraine </option> 
+                            
+                            <option value="Vanuatu">Vanuatu </option> 
+                            <option value="Vietnam">Vietnam </option>
+                             
+                            <option value="Zambie">Zambie </option>
+                            <option value="Zimbabwe">Zimbabwe </option>
+                          </select>   
+                  </div>
+                  <div>
+                    <label htmlFor="photo" class="mb-2 text-gray-400 text-lg">photo<span class="text-red-600 inline-block p-1 text-sm">*</span></label>
+                    <input
+                              id="photo"
+                              class="border p-3 shadow-md  border-gray-700 placeholder:text-base focus:outline-none ease-in-out duration-300 rounded-lg w-full"
+                              type="file"
+                              placeholder="photo jouer"
+                              required
+                            />
+                  </div>
+                  <div>
+                    <label htmlFor="club" class="mb-2 text-gray-400 text-lg">club<span class="text-red-600 inline-block p-1 text-sm">*</span></label>
+                    <input
+                              id="club"
+                              class="border p-3 shadow-md  border-gray-700 placeholder:text-base focus:outline-none ease-in-out duration-300 rounded-lg w-full"
+                              type="file"
+                              placeholder="photo club"
+                              required
+                            />
+                  </div>
+                  <div>
+                    <label htmlFor="note" class="mb-2 text-gray-400 text-lg">note<span class="text-red-600 inline-block p-1 text-sm">*</span></label>
+                    <input
+                              id="note"
+                              class="border p-3 shadow-md  border-gray-700 placeholder:text-base focus:outline-none ease-in-out duration-300 rounded-lg w-full"
+                              type="number"
+                              placeholder="note"
+                              required
+                            />
+                  </div>
+                </form>
+              </div>
+      
+              <div aria-hidden="true" class="border-b border-gray-700 px-2"></div>
+              <div class="px-6 py-2">
+                <div class="grid gap-2 grid-cols-[repeat(auto-fit,minmax(0,1fr))]" id="divSave">
+                  <button type="button" onclick="fermeModalED()"
+                            class="inline-flex items-center justify-center py-1 gap-1 font-medium rounded-lg border transition-colors outline-none focus:ring-offset-2 focus:ring-2 focus:ring-inset dark:focus:ring-offset-0 min-h-[2.25rem] px-4 text-sm text-gray-800 bg-white border-gray-300 hover:bg-gray-50 focus:ring-primary-600 focus:text-primary-600 focus:bg-primary-50 focus:border-primary-600 dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-600 dark:hover:border-gray-500 dark:text-gray-200 dark:focus:text-primary-400 dark:focus:border-primary-400 dark:focus:bg-gray-800">
+                            Cancel
+                          </button>
+      
+                  <button type="submit" id="submitEdit"
+                            class="inline-flex items-center justify-center py-1 gap-1 font-medium rounded-lg border transition-colors outline-none focus:ring-offset-2 focus:ring-2 focus:ring-inset dark:focus:ring-offset-0 min-h-[2.25rem] px-4 text-sm text-white shadow focus:ring-white border-transparent bg-[#4d1b80] hover:bg-[#7127BA] focus:bg-[#11071F] focus:ring-offset-[#11071F]">
+      
+                            <span class="flex items-center gap-1">
+                              <span class="">
+                                save edit
+                              </span>
+                            </span>
+                          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     <!-- end modaleEdit -->
+
+    <section class="  mx-auto my-auto h-vh w-full  flex  mt-auto justify-center   justify-center aling-items  "style="perspective: 1000px;">
         <div class="bg-black/60 w-full h-[40px] absolute flex justify-around z-20">
             <button type="button" class="bg-blue-700 w-[100px] rounded-[5px]" onclick="fermeModal()">Add </button>
             <select name="" id="" class="w-[100px] rounded-[5px] text-center">
@@ -470,10 +451,10 @@
         </div>
         <div class="xl:bg-[url(./assets/img/tirane.png)]  bg-[url(./assets/img/tiraneMopile.jpg)] bg-cover  w-[100vw] h-[100vh]   tirane" ></div>
 
-        <article class="flex md:flex-row flex-col border-2 w-[70%] mt-[1%] absolute  border-green-500 h-[60vw]  justify-center  grid grid-rows-7 grid-cols-1   w-[83vw] h-[94vh]" id="tirane">
+        <article class="flex md:flex-row flex-col  w-[70%] mt-[1%] absolute  border-green-500 h-[60vw]  justify-center  grid grid-rows-7 grid-cols-1    w-[83vw] h-[94vh]" id="tirane">
             
         <div class="flex flex-row justify-center">
-            <div class="border-2 border-blue-500 flex scale-[0.75] player " style=" perspective: 500px;" id="ST" >
+            <div class=" flex md:scale-[1] scale-[0.75] player " style=" perspective: 500px;" id="ST" >
                 <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout "></div>
                 <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center hidden " id="modifyCard"> 
                     <img src="./assets/img/edit.png" class="" alt="">
@@ -483,7 +464,7 @@
             </div>
         </div>
         <div class="flex flex-row justify-around">
-            <div class="border-2 border-blue-500 flex scale-[0.75]  player " style=" perspective: 500px;"  id="LM">
+            <div class=" flex md:scale-[1] scale-[0.75]  player " style=" perspective: 500px;"  id="LM">
                 <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout "></div>
                 <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center hidden " id="modifyCard"> 
                     <img src="./assets/img/edit.png" class="" alt="">
@@ -491,7 +472,7 @@
                     <img src="./assets/img/de.webp" class=" w-[16px]" alt="">
                 </div>
             </div>
-            <div class="border-2 border-blue-500 flex scale-[0.75] player " style=" perspective: 500px;"   id="RM" >
+            <div class=" flex md:scale-[1] scale-[0.75] player " style=" perspective: 500px;"   id="RM" >
                 <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout "></div>
                 <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center  hidden " id="modifyCard"> 
                     <img src="./assets/img/edit.png" class="" alt="">
@@ -501,7 +482,7 @@
             </div>
         </div>
         <div class="flex flex-row justify-around"> 
-            <div class="border-2 border-blue-500 flex  scale-[0.75] player " style=" perspective: 500px;"    id="CDM">
+            <div class=" flex  md:scale-[1] scale-[0.75] player " style=" perspective: 500px;"    id="CDM">
                 <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout "></div>
                 <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center  hidden" id="modifyCard"> 
                     <img src="./assets/img/edit.png" class="" alt="">
@@ -511,7 +492,7 @@
             </div>
         </div>
         <div class="flex flex-row justify-evenly">
-            <div class="border-2 border-blue-500 flex  scale-[0.75] player " style=" perspective: 500px;" id="CML" >
+            <div class=" flex  md:scale-[1] scale-[0.75] player " style=" perspective: 500px;" id="CML" >
                 <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout "></div>
                 <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center  hidden " id="modifyCard"> 
                     <img src="./assets/img/edit.png" class="" alt="">
@@ -519,7 +500,7 @@
                     <img src="./assets/img/de.webp" class=" w-[16px]" alt="">
                 </div>
             </div>
-            <div class="border-2 border-blue-500 flex scale-[0.75] player " style=" perspective: 500px;"  id="CMR">
+            <div class=" flex md:scale-[1] scale-[0.75] player " style=" perspective: 500px;"  id="CMR">
                 <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout "></div>
                 <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center hidden " id="modifyCard"> 
                     <img src="./assets/img/edit.png" class="" alt="">
@@ -529,7 +510,7 @@
             </div>
         </div>
         <div class="flex flex-row justify-between">
-            <div class="border-2 border-blue-500 flex scale-[0.75] player " style=" perspective: 500px;" id="LB" >
+            <div class=" flex md:scale-[1] scale-[0.75] player " style=" perspective: 500px;" id="LB" >
                 <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout "></div>
                 <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center  hidden  " id="modifyCard"> 
                     <img src="./assets/img/edit.png" class="" alt="">
@@ -537,7 +518,7 @@
                     <img src="./assets/img/de.webp" class=" w-[16px]" alt="">
                 </div>
             </div>
-            <div class="border-2 border-blue-500 flex scale-[0.75] player " style=" perspective: 500px;"  id="CBL">
+            <div class=" flex md:scale-[1] scale-[0.75] player " style=" perspective: 500px;"  id="CBL">
                 <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout "></div>
                 <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center hidden " id="modifyCard"> 
                     <img src="./assets/img/edit.png" class="" alt="">
@@ -547,7 +528,7 @@
             </div>
         </div>
         <div class="flex flex-row justify-evenly">
-            <div class="border-2 border-blue-500 flex  scale-[0.75] player " style=" perspective: 500px;" id="CBR">
+            <div class=" flex  md:scale-[1] scale-[0.75] player " style=" perspective: 500px;" id="CBR">
                 <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout "></div>
                 <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center hidden " id="modifyCard"> 
                     <img src="./assets/img/edit.png" class="" alt="">
@@ -555,7 +536,7 @@
                     <img src="./assets/img/de.webp" class=" w-[16px]" alt="">
                 </div>
             </div>
-            <div class="border-2 border-blue-500 flex scale-[0.75]  player" style=" perspective: 500px;" id="RB" >
+            <div class=" flex md:scale-[1] scale-[0.75]  player" style=" perspective: 500px;" id="RB" >
                 <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout "></div>
                 <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center hidden " id="modifyCard"> 
                     <img src="./assets/img/edit.png" class="" alt="">
@@ -565,7 +546,7 @@
             </div>
         </div>
         <div class="flex flex-row justify-center">    
-            <div class="border-2 border-blue-500 flex scale-[0.75]  " style=" perspective: 500px;" >
+            <div class=" flex md:scale-[1] scale-[0.75]  " style=" perspective: 500px;" id="GK" >
                 <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout "></div>
                 <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center hidden " id="modifyCard"> 
                     <img src="./assets/img/edit.png" class="" alt="">
@@ -578,41 +559,59 @@
     </section>
     <section>
         
-        <article  class="flex-wrap   gap-4">
-            <div class="border-2 border-red-500 flex scale-[0.75]  " style=" perspective: 500px;" >
-                <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout ">
-                    <div class=" col-start-2  col-span-2 row-start-2 row-span-5 bg-white/15  rounded-t-[4px] r flex flex-col items-center">
-                        <span>90</span>
-                        <span class="mt-[-8px] text-[10px]">cmp</span>
-                        <hr class="border-red-500 z-10 w-8/12">
-                        <img class="mt-[2px] mb-[2px] w-9/12" src="./assets/img/ar.webp" alt="">
-                        <hr class="border-red-500 z-10 w-8/12">
-                        <img class="mt-[2px] w-9/12" src="./assets/img/ar.webp" alt="">
-                    </div>
-                    <img src="./assets/img/jeun.png" alt="" srcset="" class="w-[10px] col-start-5 row-start-1 mt-1">
-                    <img  src="./assets/img/amine-removebg-preview.png" class=" w-full bg-white/70 col-span-5 col-start-4 row-start-2  row-span-5   rounded-tl-[30px] rounded-br-[30px]  h-[79px] mt-[2px]    ">
-                    <span class="col-span-5 col-start-4 row-start-6 row-span-1 text-[10px]  text-center text-black  bg-white/30 rounded-[5px] z-10" style="font-family: Roboto;">C.Ronaldo</span>
-                    <hr class=" z-10 border-red-500 row-start-7  col-span-7 col-start-2">
-                    <table class="bg-white/20 row-start-7 row-span-2 col-start-2 col-span-7 text-[6px]  rounded-tr-[10px] rounded-bl-[10px] font-[Latin]">
-                        <tr>
-                            <th>pac</th>
-                            <th>pac</th>
-                            <th>pac</th>
-                            <th class="border-l-[0.5px]  border-red-500 rounded-tl-[10px] ">pac</th>
-                            <th>pac</th>
-                            <th>pac</th>
-                        </tr>
-                        <tr >
-                            <th>90</th>
-                            <th>90</th>
-                            <th>90</th>
-                            <th class="border-l-[1px] border-red-500">90</th>
-                            <th>90</th>
-                            <th>90</th>
-                        </tr>
-                    </table>
+        <article  class=" flex flex-wrap   flex-row  gap-4 bg-green-700/60">
+  
+            <div class=" flex md:scale-[1] scale-[0.75] change " style=" perspective: 500px;"   id="change1" >
+                <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout cardChange"></div>
+                <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center  hidden " id="modifyCard"> 
+                    <img src="./assets/img/edit.png" class="" alt="">
+                    <img src="./assets/img/change.png" class="" alt="">
+                    <img src="./assets/img/de.webp" class=" w-[16px]" alt="">
                 </div>
-                <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center hidden " id="modifyCard"> 
+            </div>
+            <div class=" flex md:scale-[1] scale-[0.75] change " style=" perspective: 500px;"   id="change2" >
+                <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout cardChange "></div>
+                <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center  hidden " id="modifyCard"> 
+                    <img src="./assets/img/edit.png" class="" alt="">
+                    <img src="./assets/img/change.png" class="" alt="">
+                    <img src="./assets/img/de.webp" class=" w-[16px]" alt="">
+                </div>
+            </div>
+            <div class=" flex md:scale-[1] scale-[0.75] change " style=" perspective: 500px;"   id="change3" >
+                <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout cardChange "></div>
+                <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center  hidden " id="modifyCard"> 
+                    <img src="./assets/img/edit.png" class="" alt="">
+                    <img src="./assets/img/change.png" class="" alt="">
+                    <img src="./assets/img/de.webp" class=" w-[16px]" alt="">
+                </div>
+            </div>
+            <div class=" flex md:scale-[1] scale-[0.75] change " style=" perspective: 500px;"   id="change4" >
+                <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout cardChange "></div>
+                <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center  hidden " id="modifyCard"> 
+                    <img src="./assets/img/edit.png" class="" alt="">
+                    <img src="./assets/img/change.png" class="" alt="">
+                    <img src="./assets/img/de.webp" class=" w-[16px]" alt="">
+                </div>
+            </div>
+            <div class=" flex md:scale-[1] scale-[0.75] change " style=" perspective: 500px;"   id="change5" >
+                <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout cardChange "></div>
+                <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center  hidden " id="modifyCard"> 
+                    <img src="./assets/img/edit.png" class="" alt="">
+                    <img src="./assets/img/change.png" class="" alt="">
+                    <img src="./assets/img/de.webp" class=" w-[16px]" alt="">
+                </div>
+            </div>
+            <div class=" flex  md:scale-[1] scale-[0.75] change " style=" perspective: 500px;"   id="change6" >
+                <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout cardChange "></div>
+                <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center  hidden " id="modifyCard"> 
+                    <img src="./assets/img/edit.png" class="" alt="">
+                    <img src="./assets/img/change.png" class="" alt="">
+                    <img src="./assets/img/de.webp" class=" w-[16px]" alt="">
+                </div>
+            </div>
+            <div class=" flex  md:scale-[1] scale-[0.75] change " style=" perspective: 500px;"   id="change7" >
+                <div class="grid grid-rows-9 grid-cols-9  bg-[url(./assets/img/noir.png)] bg-cover w-[100px]  h-[154px] text-[#FFED00] font-[Modern] cardAjout cardChange "></div>
+                <div class="absolute flex  flex-col col-start-2  col-span-2 row-start-2 row-span-5 gap-2 right-[4px] top-[20px]  w-[20px]  rounded-t-[5px] rounded-b-[5px] z-20 bg-white/60 justify-center  hidden " id="modifyCard"> 
                     <img src="./assets/img/edit.png" class="" alt="">
                     <img src="./assets/img/change.png" class="" alt="">
                     <img src="./assets/img/de.webp" class=" w-[16px]" alt="">

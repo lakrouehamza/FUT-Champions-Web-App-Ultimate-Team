@@ -1,302 +1,257 @@
-// document.getElementById('formation').onclick =function (){
-// let liste = document.getElementById('tirane').querySelectorAll('div');
 
-// let jouer = liste[0].querySelectorAll('img') || [];
-// let jouerdeuem = liste[1].querySelectorAll('img');
-// if(jouer.length>0){ 
-//     liste[1].appendChild(jouer[0]);
-//     liste[2].appendChild(jouerdeuem[1]);
-//     // liste[0].removeChild;
-// }
-// else{
-//     liste[0].appendChild(liste[1].querySelectorAll('img')[1]);
-//     liste[1].appendChild(liste[2].querySelectorAll('img')[2]);
-//     // liste[2].querySelector('img').remove();
-    // console.log(liste);
-// }
-// }//Club , DEF , DRI, PAC, PAS, PHY,SHO, name,nationality,photo,position 
-
-document.getElementById('buttonAdd').addEventListener('click',function(){
-    if(document.getElementById('popup').classList.contains('hidden'))
-        document.getElementById('popup').classList.remove('hidden');
+let lesCards =document.getElementById('tirane').querySelectorAll('.cardAjout');
+lesCards.forEach(card => {
+card.addEventListener('click',function(){
+if(card.hasChildNodes()){   
+    if(card.parentNode.querySelector('#modifyCard').classList.contains('hidden'))
+        card.parentNode.querySelector('#modifyCard').classList.remove('hidden');
     else 
-    document.getElementById('popup').classList.add('hidden');
-});
-var equipe =[];
-
-function ferme(){
-    
-    document.getElementById('popup').classList.add('hidden');
+        card.parentNode.querySelector('#modifyCard').classList.add('hidden');
 }
+});
+// console
+card.parentNode.querySelector('#modifyCard').querySelector('img[src="./assets/img/edit.png"]').addEventListener('click', function(){
+   
+
+
+document.getElementById('modalEdit').classList.remove('hidden');
+
+let lesInput = document.getElementById('modalEdit').querySelectorAll('input , select');
+let liste =card.querySelectorAll('span,img,th');
+lesInput[0].value=liste[5].textContent;
+lesInput[1].value=liste[1].textContent;
+lesInput[2].value=liste[12].textContent;
+lesInput[3].value=liste[13].textContent;
+lesInput[4].value=liste[14].textContent;
+lesInput[5].value=liste[15].textContent;
+lesInput[6].value=liste[16].textContent;
+lesInput[7].value=liste[17].textContent;
+lesInput[8].value=liste[2].src;
+lesInput[9].value=liste[4].src;
+lesInput[10].value=liste[3].src;
+lesInput[11].value=liste[0].textContent;
  
-let position = { position:[], RW : ['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],LW: ['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],ST :['PAC' , 'SHO' , 'PAS' , 'DRI' , 'DEF' , 'PHY'],
-                CDM :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],CM :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],LM :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],RM :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],
-                CB :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'], LB :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'], RB : ['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],GK : ['DIV', 'HAN', 'KIC', 'REF', 'SPD', 'POS']};
-                
+document.getElementById('submitEdit').addEventListener('click',function(){
+
+        liste[5].textContent=lesInput[0].value;
+        liste[1].textContent=lesInput[1].value;
+        liste[12].textContent=lesInput[2].value;
+        liste[13].textContent=lesInput[3].value;
+        liste[14].textContent=lesInput[4].value;
+        liste[15].textContent=lesInput[5].value;
+        liste[16].textContent=lesInput[6].value;
+        liste[17].textContent=lesInput[7].value;
+        liste[2].src=lesInput[8].value;
+        liste[4].src=lesInput[9].value;
+        liste[3].src=lesInput[10].value;
+        liste[0].textContent=lesInput[11].value;
+
+    document.getElementById('modalEdit').classList.add('hidden');
+
+    });
 
 
- document.getElementById('containerCompetence').classList.add('hidden');
- document.getElementById('position').addEventListener('change', function(){ 
-    // console.log(position[document.getElementById('position').value]);
-    if(document.getElementById('position').value=="position"){
-        document.getElementById('containerCompetence').classList.add('hidden');
-    }else{
-        document.getElementById('containerCompetence').classList.remove('hidden');
+});
+
+card.parentNode.querySelector('#modifyCard').querySelector('img[src="./assets/img/change.png"]').addEventListener('click', function(){
+    // console.log('change');
+});
+
+card.parentNode.querySelector('#modifyCard').querySelector('img[src="./assets/img/de.webp"]').addEventListener('click', function(){
+    card.innerHTML='';
+    card.parentNode.querySelector('#modifyCard').classList.add('hidden');
+});
+});
+function compar(card ,object){
+    let listeformation =card.querySelectorAll('span');
+    if(object.note !== listeformation[0].textContent.trim() && object.position !== listeformation[1].textContent.trim() && object.name !== listeformation[2].textContent.trim())
+        return true;
+    return false;
+}
+
+function fermeModal(){
+    if(document.getElementById('modal').classList.contains('hidden')){
+        document.getElementById('modal').classList.remove('hidden');
     }
-    let tr =document.createElement('tr'); 
+    else 
+        document.getElementById('modal').classList.add('hidden');
+}
+function fermeModalED(){
+    document.getElementById('modalEdit').classList.toggle('hidden');
+}
+
+var position ={position:[], RW : ['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],LW: ['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],ST :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],
+    CDM :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],CMR :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],CML :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],LM :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],RM :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],
+    CBL :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'], CBR :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'], LB :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'], RB :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],GK : ['DIV', 'HAN', 'KIC', 'REF', 'SPD', 'POS']};
+
+document.getElementById('position').addEventListener('change',function(){
+    console.log(position[document.getElementById('position').value]);
+    if(document.getElementById('position').value=="position"){
+        document.getElementById('competence').classList.add('hidden');
+    }else{
+        document.getElementById('competence').classList.remove('hidden');
+    }
+    let trTitre =document.createElement('tr'); 
     let trInput =document.createElement('tr'); 
-       tr.classList.add("dark:text-white");
-       document.querySelector('#competence').innerHTML = '';
-       document.getElementById('competence').appendChild(tr);
-       document.getElementById('competence').appendChild(trInput);
+       document.querySelector('#competence').innerHTML='';    
+       document.querySelector('#competence').appendChild(trTitre);
+       document.querySelector('#competence').appendChild(trInput);
        let i=0;
        position[document.getElementById('position').value].forEach(element => {
-        let th =document.createElement('th');
+        let thTitre =document.createElement('th');
         let thInput =document.createElement('th');
         let label = document.createElement('label');
         let input = document.createElement('input');
+
         label.classList.add('dark:text-white');
-        input.classList.add('w-11');
+        input.classList.add('w-14');
         input.value="0";
         input.type="number";
-        document.querySelectorAll('#competence tr')[0].appendChild(th);
+        document.querySelectorAll('#competence tr')[0].appendChild(thTitre);
         label.textContent=element;
-        // label.for
+        label.innerHTML+='<span class="text-red-600 inline-block p-1 text-sm">*</span>';
         document.querySelectorAll('#competence tr')[0].querySelectorAll('th')[i].appendChild(label);
+
         document.querySelectorAll('#competence tr')[1].appendChild(thInput);
         input.id=element;
         document.querySelectorAll('#competence tr ')[1].querySelectorAll('th')[i++].appendChild(input);
-    }
+    });
+    // console.log(document.querySelector('#competence'));
 
-       );
+
 });
 
-function afichage(){
+let listePlayer =[];
 
-    const lesCards= document.querySelectorAll('.carte');
-    const changement =document.getElementById('changement');
+const objectReject = {
+    name: /^[a-zA-Z\s]{3,10}$/
+};
+// console.log(document.getElementById('formAdd'));
 
-    changement.innerHTML='';
-    lesCards.forEach(element =>{
-        equipe.forEach(jouer =>{
-            if(element.id == jouer.position){
-                let div1 = document.createElement('div');
-                div1.classList.add('relative', 'w-[100px]', 'h-[180px]', 'bg-cover', 'bg-center', 'transition-all', 'ease-in');
-                div1.style.backgroundImage = "url('https://selimdoyranli.com/cdn/fut-player-card/img/card_bg.png')";
-                
-                let div2 = document.createElement('div');
-                div2.classList.add('relative', 'flex', 'text-[#e9cc74]', 'px-[0.3rem]');
-
-                let divUpper = document.createElement('div');
-                divUpper.classList.add('absolute', 'py-[0.8rem_0]', 'text-xs', 'uppercase', 'font-light');
-
-                let playerRating = document.createElement('div');
-                playerRating.classList.add('text-[1rem]', 'mt-5');
-                playerRating.textContent = jouer.rating;
-                divUpper.appendChild(playerRating);
-                let playerPosition = document.createElement('div');
-                playerPosition.textContent = jouer.position;
-                divUpper.appendChild(playerPosition);
-                let playerFlag = document.createElement('div');
-                playerFlag.classList.add('block');
-                let flagImg = document.createElement('img');
-                flagImg.src = jouer.flag;
-                flagImg.alt = jouer.nationality;
-                flagImg.classList.add('w-[1rem]', 'h-[14px]', 'object-contain');
-                playerFlag.appendChild(flagImg);
-                divUpper.appendChild(playerFlag);
-                let playerLogo = document.createElement('div');
-                playerLogo.classList.add('block');
-                let logoImg = document.createElement('img');
-                logoImg.src = jouer.logo;
-                logoImg.alt = jouer.club;
-                logoImg.classList.add('w-[1rem]', 'h-[14px]', 'object-contain');
-                playerLogo.appendChild(logoImg);
-                divUpper.appendChild(playerLogo);
-                let playerPhotoDiv = document.createElement('div');
-                playerPhotoDiv.classList.add('w-[70px]', 'h-[80px]', 'mx-auto', 'overflow-hidden');
-                let playerPhoto = document.createElement('img');
-                playerPhoto.src = jouer.photo;
-                playerPhoto.alt = jouer.name;
-                playerPhoto.classList.add('w-full', 'h-full', 'object-contain', 'relative', 'right-[-1rem]', 'bottom-0');
-                playerPhotoDiv.appendChild(playerPhoto);
-                
-                div2.appendChild(divUpper);
-                div2.appendChild(playerPhotoDiv);
-                let divPosition = document.createElement('div');
-                divPosition.classList.add('w-full', 'flex', 'justify-around', 'text-[#88e635]', 'text-[0.7rem]', 'font-bold', 'uppercase');
-                let positionSpan = document.createElement('span');
-                positionSpan.classList.add('ml-[0.4rem]', 'text-shadow-lg');
-                positionSpan.textContent = jouer.position;
-                divPosition.appendChild(positionSpan);
-                let divDetails = document.createElement('div');
-                divDetails.classList.add('relative');
-                
-                let playerNameDiv = document.createElement('div');
-                playerNameDiv.classList.add('text-[#e9cc74]', 'w-[90%]', 'mx-auto');
-                let playerName = document.createElement('div');
-                playerName.classList.add('text-center', 'w-[100%]', 'text-[0.6rem]', 'uppercase', 'border-b-2', 'border-[#e9cc74]/[0.1]');
-                let nameSpan = document.createElement('span');
-                nameSpan.classList.add('block', 'text-shadow-lg');
-                nameSpan.textContent = jouer.name;
-                playerName.appendChild(nameSpan);
-                playerNameDiv.appendChild(playerName);
-                
-                let statsDiv = document.createElement('div');
-                statsDiv.classList.add('flex', 'justify-center');
-                
-                let statsLeft = document.createElement('div');
-                statsLeft.classList.add('pr-[1.5rem]', 'border-r-2', 'border-[#e9cc74]/[0.1]');
-                
-                ['pace', 'shooting', 'passing'].forEach((statKey) => {
-                    let statDiv = document.createElement('div');
-                    statDiv.classList.add('flex', 'items-center', 'text-[0.5rem]', 'uppercase');
-                    let statValue = document.createElement('span');
-                    statValue.classList.add('font-bold', 'mr-[0.3rem]');
-                    statValue.textContent = jouer[statKey];
-                    let statLabel = document.createElement('span');
-                    statLabel.classList.add('font-light');
-                    statLabel.textContent = statKey.toUpperCase().slice(0, 3);
-                    statDiv.appendChild(statValue);
-                    statDiv.appendChild(statLabel);
-                    statsLeft.appendChild(statDiv);
-                });
-                
-                let statsRight = document.createElement('div');
-                ['dribbling', 'defending', 'physical'].forEach((statKey) => {
-                    let statDiv = document.createElement('div');
-                    statDiv.classList.add('flex', 'items-center', 'text-[0.5rem]', 'uppercase');
-                    let statValue = document.createElement('span');
-                    statValue.classList.add('font-bold', 'mr-[0.3rem]');
-                    statValue.textContent = jouer[statKey];
-                    let statLabel = document.createElement('span');
-                    statLabel.classList.add('font-light');
-                    statLabel.textContent = statKey.toUpperCase().slice(0, 3);
-                    statDiv.appendChild(statValue);
-                    statDiv.appendChild(statLabel);
-                    statsRight.appendChild(statDiv);
-                });
-                
-                statsDiv.appendChild(statsLeft);
-                statsDiv.appendChild(statsRight);
-                playerNameDiv.appendChild(statsDiv);
-                
-                divDetails.appendChild(playerNameDiv);
-                
-                div1.appendChild(div2);
-                div1.appendChild(divPosition);
-                div1.appendChild(divDetails);
-                
-                if (element.hasChildNodes()) {
-                    changement.appendChild(div1);
-                } else {
-                    element.appendChild(div1);
-                }
-                
-}
-    });
-    });
-}
-afichage();
-
-function  testejour( jouer){
-    equipe.forEach(elment => {
-        if(elment.name === jouer.name){
-            return true;
-        }
-    });
-return false;
-
-}
-document.getElementById('formAjouteJour').addEventListener('submit',(e)=>{
+document.getElementById('submit').addEventListener('click', (e) => {
     e.preventDefault();
-let valide = true;
-document.querySelectorAll(" form input").forEach(inputs=>{
-    if(inputs.value=="" || +inputs.value<=0 || inputs.value>100 ){
-        inputs.style.border="solid red 2px";
-        valide=false;
+    let valide = true; 
+    document.getElementById('formAdd').querySelectorAll('input').forEach(inputs =>{
+    if (inputs.value=="" ||inputs.value>100|| inputs.value<1 ) {
+        inputs.style.border = "solid 2px red";
+        let valide = false; 
+    } else {
+        inputs.style.border = "solid 2px green";
+        valide = true;
     }
-    else 
-    inputs.style.border="solid green 2px";
-}
-
-);
-
-document.querySelectorAll("form select").forEach(selects =>{
-    if(selects.value == "position"){
-        selects.style.border="solid red 2px";
-        valide =false;
-    }
-    else 
-        selects.style.border="solid green 2px";
-})
-if(valide){
-    let objetJoueur = {};
-document.querySelectorAll("form input ,form select").forEach(element=>{
-    let attribut =element.id;
-    objetJoueur[attribut] = element.value;
-});
-
-
-if(!testejour(objetJoueur)){
-equipe.push(objetJoueur);
-console.log(objetJoueur);
-afichage();
-}
-}
-
-
-});
-
-
-document.querySelectorAll('.carte').forEach(card =>{
-    card.addEventListener('click',function(){
-      
-    if(card.hasChildNodes()){
-        if(!card.parentNode.querySelector('#containeEdit')){
-        let supprime = document.createElement('img');
-        let edit = document.createElement('img');
-        edit.id="edit";
-        supprime.id='supprime';
-        let containeEdit = document.createElement('div');
-        containeEdit.id='containeEdit';
-        // containeEdit.classList.add('flex','justify-between','col-start-1','col-end-12','row-start-1','row-end-1');
-        containeEdit.classList.add('flex','justify-between','w-[100px]');
-        containeEdit.appendChild(edit);
-        containeEdit.appendChild(supprime);
-        supprime.classList.add('bg-red-500','hover:bg-black','rounded-[30px]','w-[20px]');
-        edit.classList.add('bg-blue-700','hover:bg-green-500','rounded-[40px]','w-[20px]');
-        supprime.src="./../../assets/img/delete.png";
-        edit.src="./../../assets/img/edit.png";
-        console.log("supprime edete ");
-        card.parentNode.insertBefore(containeEdit,card);
-
-
-// card.addEventListener('click',function(){
-//     if(card.parentNode.querySelector('#containeEdit').classList.contains('hidden')){
-//         card.parentNode.querySelector('#containeEdit').classList.remove('hidden');
-//     }
-//     else 
-//     card.parentNode.querySelector('#containeEdit').classList.add('hidden');
-// }
-// );
-        
+    });
+    
+    document.getElementById('formAdd').querySelectorAll('select').forEach(selects =>{
+        if (selects.value=="position" || selects.value=="nationalite" ) {
+            selects.style.border = "solid 2px red";
+             valide = false; 
+        } else {
+            selects.style.border = "solid 2px green";
+            valide = true; ;
         }
+        });
+
+    if (objectReject.name.test(document.getElementById('name').value.trim())) {
+        document.getElementById('name').style.border = "solid 2px green";
+        valide =true;
+    } else {
+        document.getElementById('name').style.border = "solid 2px red";
+        valide = false; 
     }
-    else {
-        document.getElementById('popup').classList.remove('hidden');
-        document.getElementById('position').value=card.id;
-        document.getElementById('position').disabled="false";
+    if (valide) { 
+        let formation =document.querySelectorAll('form select,form input');
+        // console.log(formation);
+       
+        let objectJouer ={
+            name :formation[0].value,
+            position:formation[1].value,
+            comp1:formation[2].value,
+            comp2:formation[3].value,
+            comp3:formation[4].value,
+            comp4:formation[5].value,
+            comp5:formation[6].value,
+            comp6:formation[7].value,
+            nationalite:`https://cdn.sofifa.net/flags/${formation[8].value.toLowerCase().substring(0,2)}.png`,
+            photo:formation[9].value,
+            club :formation[10].value,
+            note :formation[11].value,
+            play:false
+        }
+        listePlayer.push(objectJouer);
+        
+        ajoute(objectJouer);
+    } 
+     
+});
+ 
+
+function ajoute(player) {
+    let test= true;
+        // listePlayer.forEach(player => {
+    document.querySelectorAll('.cardAjout').forEach(card => {
+            // console.log(listePlayer);
+            if (player.position === card.parentNode.id) {
+                let pos = position[player.position];
+                // console.log(listePlayer);
+                let formation = `
+                    <div class="col-start-2 col-span-2 row-start-2 row-span-5 bg-white/15 rounded-t-[4px] r flex flex-col items-center">
+                        <span>${player.note}</span>
+                        <span class="mt-[-8px] text-[10px] ">${player.position}</span>
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] mb-[2px] w-9/12" src="${player.nationalite}" alt="Player Nationality">
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] w-9/12" src="${player.club}"  >
+                    </div>
+                    <img src="${player.photo}" class="w-full bg-white/70 col-span-5 col-start-4 row-start-2 row-span-5 rounded-tl-[30px] rounded-br-[30px] h-[79px] mt-[2px]">
+                    <span class="col-span-5 col-start-4 row-start-6 row-span-1 text-[10px] text-center text-black bg-white/30 rounded-[5px] z-10" style="font-family: Roboto;">${player.name}</span>
+                    <hr class="z-10 border-red-500 row-start-7 col-span-7 col-start-2">
+                    <table class="bg-white/20 row-start-7 row-span-2 col-start-2 col-span-7 text-[6px] rounded-tr-[10px] rounded-bl-[10px] font-[Latin]">
+                        <tr>
+                            <th>${pos[0]}</th>
+                            <th>${pos[1]}</th>
+                            <th>${pos[2]}</th>
+                            <th class="border-l-[0.5px] border-red-500 rounded-tl-[10px]">${pos[3]}</th>
+                            <th>${pos[4]}</th>
+                            <th>${pos[5]}</th>
+                        </tr>
+                        <tr>
+                            <th>${player.comp1}</th>
+                            <th>${player.comp2}</th>
+                            <th>${player.comp3}</th>
+                            <th class="border-l-[1px] border-red-500">${player.comp4}</th>
+                            <th>${player.comp5}</th>
+                            <th>${player.comp6}</th>
+                        </tr>
+                    </table>
+                `;
+                
+                if (card.innerHTML.trim() === '') {
+                    card.innerHTML = formation;
+                } else {
+                    
+                    document.querySelectorAll('.cardChange').forEach(cardChange => {
+                        if (cardChange.innerHTML.trim() === '') {
+                            if(test){
+                            cardChange.innerHTML = formation;
+                            test=false;
+                            }
+                        }
+                    });
+                }
+            }
+        });
+    // });
+    
+
+    let liste = document.querySelectorAll('.cardAjout');
+    let index = 0;
+    for(let i = 0 ;i <liste.length ; i++){
+        if(liste.innerHTML!='')
+            index++;
     }
-});
+    if(index>=11)
+        alert('Le onze de départ est complet');
+}
 
 
 
-});
-
-
-// card.getElementById('edit').addEventListener('click',function(){
-//     document.getElementById('popup').classList.remove('hidden');
-//     // let listeInput = document.querySelectorAll('form input','form select');
-//     // let listeFormationCard =document.querySelector()
-// });
