@@ -11,18 +11,9 @@ if(card.hasChildNodes()){
 });
 card.parentNode.querySelector('#modifyCard').querySelector('img[src="./assets/img/edit.png"]').addEventListener('click', function(){
     document.getElementById('modal').classList.remove('hidden');
-    // name :formation[0].value,
-    //         position:formation[1].value,
-    //         comp1:formation[2].value,
-    //         comp2:formation[3].value,
-    //         comp3:formation[4].value,
-    //         comp4:formation[5].value,
-    //         comp5:formation[6].value,
-    //         comp6:formation[7].value,
-    //         nationalite:`https://cdn.sofifa.net/flags/${formation[8].value.toLowerCase().substring(0,2)}.png`,
-    //         photo:formation[9].value,
-    //         club :formation[10].value,
-    //         note :formation[11].value,
+
+let lesInput = querySelectorAll('form input ,form select');
+
 
 });
 
@@ -31,9 +22,15 @@ card.parentNode.querySelector('#modifyCard').querySelector('img[src="./assets/im
 });
 
 card.parentNode.querySelector('#modifyCard').querySelector('img[src="./assets/img/de.webp"]').addEventListener('click', function(){
-    console.log('delete')
+    card.innerHTML='';
+    card.
+    listePlayer=listePlayer.filter(item => item.mane !== 'hamza')
 });
 });
+function compar(card ,object){
+    let listeformation =card.querySelectorAll('img ,span');
+    if(object.name!==listeformation[])
+}
 
 function fermeModal(){
     if(document.getElementById('modal').classList.contains('hidden')){
@@ -43,9 +40,9 @@ function fermeModal(){
         document.getElementById('modal').classList.add('hidden');
 }
 
-let position ={position:[], RW : ['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],LW: ['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],ST :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],
-    CDM :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],CM :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],LM :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],RM :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],
-    CB :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'], LB :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'], RB :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],GK : ['DIV', 'HAN', 'KIC', 'REF', 'SPD', 'POS']};
+var position ={position:[], RW : ['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],LW: ['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],ST :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],
+    CDM :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],CMR :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],CML :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],LM :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],RM :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],
+    CBL :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'], CBR :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'], LB :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'], RB :['PAC', 'SHO', 'PAS', 'DRI', 'DEF', 'PHY'],GK : ['DIV', 'HAN', 'KIC', 'REF', 'SPD', 'POS']};
 
 document.getElementById('position').addEventListener('change',function(){
     // console.log(position[document.getElementById('position').value]);
@@ -125,177 +122,91 @@ document.getElementById('submit').addEventListener('click', (e) => {
         let formation =document.querySelectorAll('form select,form input');
         // console.log(formation);
        
-
+        let objectJouer ={
+            name :formation[0].value,
+            position:formation[1].value,
+            comp1:formation[2].value,
+            comp2:formation[3].value,
+            comp3:formation[4].value,
+            comp4:formation[5].value,
+            comp5:formation[6].value,
+            comp6:formation[7].value,
+            nationalite:`https://cdn.sofifa.net/flags/${formation[8].value.toLowerCase().substring(0,2)}.png`,
+            photo:formation[9].value,
+            club :formation[10].value,
+            note :formation[11].value,
+            play:false
+        }
         listePlayer.push(objectJouer);
         
         ajoute();
     } 
-    
-    // console.log(document.getElementById('position').value.trim());
+     
 });
-
-// console.log(document.getElementById('position').value.trim());
-
-// function ajoute(){
-//     // listePlayer.forEach(element =>{
-//         document.querySelectorAll('cardAjout').forEach(card=>{
-//             if(element.position==card.parentNode.id){
-//             // if(card.innerHTML=``){
-//             let div1=document.createElement('div');
-//             div1.classList.add('col-start-2','col-span-2','row-start-2','row-span-5','bg-white/15','rounded-t-[4px]','flex','flex-col','items-center');
-//             card.appendChild(div1);
-//             let span1=document.createElement(span);
-//             span1.textContent=element.note;
-//             div1.appendChild(span1);
-//             let span2=document.createElement(span);
-//             span2.classList.add('mt-[-8px]','text-[10px]');
-//             span2.textContent=element.position;
-//             div1.appendChild(span2);
-//             let hr =document.createElement('hr');
-//             hr.classList.add('border-red-500','z-10','w-8/12');
-//             div1.appendChild(hr);
-//             let img1=document.createElement('img');
-//             img1.classList.add('mt-[2px]','mb-[2px]','w-9/12');
-//             img1.src=element.nationalite;
-//             let img2=document.createElement('img');
-//             img2.classList.add('mt-[2px]','w-9/12');
-//             img2.src=element.club;
-//             card.appendChild(img2);
-//             let img3=document.createElement('img');
-//             img3.classList.add('w-full','bg-white/70','col-span-5','col-start-4','row-start-2','row-span-5 ','rounded-tl-[30px]','rounded-br-[30px] ','h-[79px]','mt-[2px]');
-//             img3.src=element.photo;
-//             card.appendChild(img3);
-//             let span3 =document.createElement(span);
-//             span3.classList.add('col-span-5','col-start-4','row-start-6','row-span-1','text-[10px]','text-center','text-black','bg-white/30','rounded-[5px]','z-10');
-//             span3.textContent=element.name;
-//             card.appendChild(span3);
-//             let hr2 =document.createElement('hr');
-//             hr2.classList.add('z-10','border-red-500','row-start-7','col-span-7','col-start-2');
-//             card.appendChild(hr2);
-//             let table = document.createElement('table');
-//             table.classList.add('bg-white/20','row-start-7','row-span-2','col-start-2','col-span-7','text-[6px]','rounded-tr-[10px]','rounded-bl-[10px]','font-[Latin]');
-//             card.appendChild(table);
-//             let tr1 = document.createElement('tr');
-//             let tr2 = document.createElement('tr');
-//             table.appendChild(tr1);
-//             table.appendChild(tr2);
-            
-//             th11 =document.createComment('th');
-//             th12 =document.createComment('th');
-//             th13 =document.createComment('th');
-//             th14 =document.createComment('th');
-//             th15 =document.createComment('th');
-//             th16 =document.createComment('th');
-//             th21 =document.createComment('th');
-//             th22 =document.createComment('th');
-//             th23 =document.createComment('th');
-//             th24 =document.createComment('th');
-//             th25 =document.createComment('th');
-//             th26 =document.createComment('th');
-//             tr1.appendChild(th11);
-//             tr1.appendChild(th12);
-//             tr1.appendChild(th13);
-//             tr1.appendChild(th14);
-//             tr1.appendChild(th15);
-//             tr1.appendChild(th16);
-//             tr1.appendChild(th21);
-//             tr2.appendChild(tr22);
-//             tr2.appendChild(tr23);
-//             tr2.appendChild(tr24);
-//             tr2.appendChild(tr25);
-//             tr2.appendChild(tr26);
-//             th41.classList.add('border-l-[0.5px]','border-red-500','rounded-tl-[10px]');
-//             th42.classList.add('border-l-[1px]','border-red-500');
-//             let compt=position[element.position];
-//             th11.textContent=compt[0];
-//             th12.textContent=compt[1];
-//             th13.textContent=compt[2];
-//             th14.textContent=compt[3];
-//             th15.textContent=compt[4];
-//             th16.textContent=compt[5];
-//             th21.textContent=comp1;
-//             th22.textContent=comp2;
-//             th23.textContent=comp3;
-//             th24.textContent=comp4;
-//             th15.textContent=comp5;
-//             th26.textContent=comp6;
-//             // }
-//                 console.log(div1);
-            
-//         }
-
-//         });
-//     // });
-
+ 
 
 function ajoute() {
-    listePlayer.forEach(player => {
-        document.querySelectorAll('.cardAjout').forEach(card => {
-            console.log(player);
-            card.innerHTML = '';
-            const playerInfo = document.createElement('div');
-            playerInfo.classList.add('col-start-2', 'col-span-2', 'row-start-2', 'row-span-5','bg-white/15', 'rounded-t-[4px]', 'flex', 'flex-col', 'items-center');
-            card.appendChild(playerInfo);
-            const noteSpan = document.createElement('span');
-            noteSpan.textContent = player.note;
-            playerInfo.appendChild(noteSpan);
-            const positionSpan = document.createElement('span');
-            positionSpan.classList.add('mt-[-8px]', 'text-[10px]');
-            positionSpan.textContent = player.position;
-            playerInfo.appendChild(positionSpan);
-            const separator = document.createElement('hr');
-            separator.classList.add('border-red-500', 'z-10', 'w-8/12');
-            playerInfo.appendChild(separator);
-            const nationalImage = document.createElement('img');
-            nationalImage.classList.add('mt-[2px]', 'mb-[2px]', 'w-9/12');
-            nationalImage.src = player.nationalite;
-            playerInfo.appendChild(nationalImage);
-            const clubImage = document.createElement('img');
-            clubImage.classList.add('mt-[2px]', 'w-9/12');
-            clubImage.src = player.club;
-            playerInfo.appendChild(clubImage);
-            const photo = document.createElement('img');
-            photo.classList.add('w-full','bg-white/70','col-span-5','col-start-4','row-start-2','row-span-5','rounded-tl-[30px]','rounded-br-[30px]','h-[79px]','mt-[2px]');
-            photo.src= player.photo;
-            console.log(player.photo);
-            card.appendChild(photo);
-            const nameSpan = document.createElement('span');
-            nameSpan.classList.add('col-span-5','col-start-4','row-start-6','row-span-1','text-[10px]','text-center','text-black','bg-white/30','rounded-[5px]','z-10');
-            nameSpan.textContent = player.name;
-            card.appendChild(nameSpan);
-            const separator2 = document.createElement('hr');
-            separator2.classList.add('z-10','border-red-500','row-start-7','col-span-7','col-start-2');
-            card.appendChild(separator2);
-            const table = document.createElement('table');
-            table.classList.add('bg-white/20','row-start-7','row-span-2','col-start-2','col-span-7','text-[6px]','rounded-tr-[10px]','rounded-bl-[10px]','font-[Latin]');
-            card.appendChild(table);
-            const trTitre = document.createElement('tr');
-            const trIput = document.createElement('tr');
-            table.appendChild(trTitre);
-            table.appendChild(trIput);
-            let varTest = false;
-           player.forEach(stat => {
-            if(stat=="com1")
-                varTest = true;
-            if(stat=="nationalite")
-                varTest = false;
-            if(varTest){
-                const th1 = document.createElement('th');
-                th1.textContent = stat;
-                if (index === 3){
+    let test= true;
+    document.querySelectorAll('.cardAjout').forEach(card => {
+        listePlayer.forEach(player => {
+            console.log(listePlayer);
+            if (player.position === card.parentNode.id) {
+                let pos = position[player.position];
+                console.log(listePlayer);
+                let formation = `
+                    <div class="col-start-2 col-span-2 row-start-2 row-span-5 bg-white/15 rounded-t-[4px] r flex flex-col items-center">
+                        <span>${player.note}</span>
+                        <span class="mt-[-8px] text-[10px] ">${player.position}</span>
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] mb-[2px] w-9/12" src="${player.nationalite}" alt="Player Nationality">
+                        <hr class="border-red-500 z-10 w-8/12">
+                        <img class="mt-[2px] w-9/12" src="${player.club}"  >
+                    </div>
+                    <img src="${player.photo}" class="w-full bg-white/70 col-span-5 col-start-4 row-start-2 row-span-5 rounded-tl-[30px] rounded-br-[30px] h-[79px] mt-[2px]">
+                    <span class="col-span-5 col-start-4 row-start-6 row-span-1 text-[10px] text-center text-black bg-white/30 rounded-[5px] z-10" style="font-family: Roboto;">${player.name}</span>
+                    <hr class="z-10 border-red-500 row-start-7 col-span-7 col-start-2">
+                    <table class="bg-white/20 row-start-7 row-span-2 col-start-2 col-span-7 text-[6px] rounded-tr-[10px] rounded-bl-[10px] font-[Latin]">
+                        <tr>
+                            <th>${pos[0]}</th>
+                            <th>${pos[1]}</th>
+                            <th>${pos[2]}</th>
+                            <th class="border-l-[0.5px] border-red-500 rounded-tl-[10px]">${pos[3]}</th>
+                            <th>${pos[4]}</th>
+                            <th>${pos[5]}</th>
+                        </tr>
+                        <tr>
+                            <th>${player.comp1}</th>
+                            <th>${player.comp2}</th>
+                            <th>${player.comp3}</th>
+                            <th class="border-l-[1px] border-red-500">${player.comp4}</th>
+                            <th>${player.comp5}</th>
+                            <th>${player.comp6}</th>
+                        </tr>
+                    </table>
+                `;
+                
+                // Check for empty content before replacing
+                if (card.innerHTML.trim() === '') {
+                    card.innerHTML = formation;
+                } else {
+                    
+                    document.querySelectorAll('.cardChange').forEach(cardChange => {
+                        if (cardChange.innerHTML.trim() === '') {
+                            if(test){
+                            cardChange.innerHTML = formation;
+                            test=false;
+                            }
+                        }
+                    });
                 }
-                const th2 = document.createElement('th');
-                th2.textContent = stat;
-                if (index === 3) {
-                    th2.classList.add('border-l-[1px]','border-red-500');
-                    th1.classList.add('border-l-[0.5px]','border-red-500','rounded-tl-[10px]');
-                }
-                trIput.appendChild(th1);
-                trIput.appendChild(th2);
             }
-            });
         });
     });
+    
+
+    if(listePlayer.length>18)
+        alert("pppp");
 }
+
 
 
