@@ -248,8 +248,8 @@ function ajoute(player) {
         if(liste.innerHTML!='')
             index++;
     }
-    if(index>=11)
-        alert('Le onze de départ est complet');
+    // if(index>=11)
+        // alert('Le onze de départ est complet');
 }
 
 
