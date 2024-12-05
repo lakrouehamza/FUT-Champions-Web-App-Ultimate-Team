@@ -172,12 +172,11 @@ document.getElementById('submit').addEventListener('click', (e) => {
             comp5:formation[6].value,
             comp6:formation[7].value,
             nationalite:`https://cdn.sofifa.net/flags/${formation[8].value.toLowerCase().substring(0,2)}.png`,
-            photo:formation[9].value,
-            club :formation[10].value,
-            note :formation[11].value,
-            play:false
+            photo: formation[9]?.files && formation[9].files[0] ? URL.createObjectURL(formation[9].files[0]): '', 
+            club: formation[10]?.files && formation[10].files[0] ? URL.createObjectURL(formation[10].files[0]) : '',
+            note :formation[11].value
         }
-        listePlayer.push(objectJouer);
+        // listePlayer.push(objectJouer);
         
         ajoute(objectJouer);
     } 
